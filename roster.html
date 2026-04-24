@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Roster — Miclass Cosmic Multiverse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+  <div class="page-content">
+
+    <!-- Header -->
+    <section style="padding:8rem 2rem 2rem;text-align:center;position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">DC + Marvel</p>
+      <h1 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin-bottom:1rem;">Character Roster</h1>
+      <p style="color:var(--text-secondary);max-width:580px;margin:0 auto 2rem;font-size:0.92rem;line-height:1.7;">Every major character from both universes. Click any character to see their essential reading list and which phases they appear in.</p>
+    </section>
+
+    <!-- Universe Switch -->
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="universe-switch-bar">
+        <button class="universe-btn dc-active" id="btn-dc-universe">⚡ DC Universe</button>
+        <span style="color:var(--text-muted);font-size:0.8rem;">vs</span>
+        <button class="universe-btn" id="btn-mv-universe">🔴 Marvel Universe</button>
+      </div>
+
+      <!-- Search -->
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input" id="roster-search" placeholder="Search by name, alias, or team...">
+      </div>
+
+      <!-- DC Roster Panel -->
+      <div id="dc-roster-panel" class="grid-auto" style="margin-bottom:4rem;"></div>
+
+      <!-- Marvel Roster Panel -->
+      <div id="mv-roster-panel" class="grid-auto hidden" style="margin-bottom:4rem;"></div>
+    </div>
+
+    <!-- Character Modal -->
+    <div class="modal-overlay" id="character-modal">
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close-btn">✕</button>
+        <div style="text-align:center;margin-bottom:1.5rem;">
+          <div class="character-initial" id="modal-char-initial" style="margin:0 auto 1rem;width:72px;height:72px;font-size:1.8rem;"></div>
+          <h2 id="modal-char-name" style="font-family:var(--font-heading);font-size:1.4rem;font-weight:700;margin-bottom:0.25rem;"></h2>
+          <p id="modal-char-alias" style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.75rem;"></p>
+          <div id="modal-char-tags" style="display:flex;flex-wrap:wrap;gap:0.4rem;justify-content:center;margin-bottom:1rem;"></div>
+        </div>
+        <div class="divider"></div>
+        <div id="modal-char-essentials" style="margin-top:1.25rem;"></div>
+        <div id="modal-char-phases"></div>
+      </div>
+    </div>
+
+    <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Miclass Cosmic Multiverse — Character Roster</p>
+    </footer>
+  </div>
+
+  <script src="js/nav-template.js"></script>
+  <script src="js/flip.js"></script>
+  <script src="js/roster.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderRosterPage();
+    });
+  </script>
+</body>
+</html>

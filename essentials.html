@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essentials — Miclass Cosmic Multiverse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+  <div class="page-content">
+
+    <section style="padding:8rem 2rem 2rem;text-align:center;position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">For Casual Readers</p>
+      <h1 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin-bottom:1rem;">⭐ Essentials</h1>
+      <p style="color:var(--text-secondary);max-width:620px;margin:0 auto 0.75rem;font-size:0.92rem;line-height:1.7;">Don't want to read every phase? Pick a character or event and get the key storylines — no deep-dive required. These are the stories that define each character's legacy.</p>
+      <p style="color:var(--text-muted);font-size:0.8rem;max-width:500px;margin:0 auto 2rem;">Perfect for people who want to understand a character before jumping into current runs.</p>
+    </section>
+
+    <div class="container" style="position:relative;z-index:1;padding-bottom:5rem;">
+
+      <!-- Universe Toggle -->
+      <div class="universe-switch-bar" style="margin-bottom:2rem;">
+        <button class="universe-btn dc-active" id="ess-dc-btn" onclick="switchEssUniverse('dc')">⚡ DC</button>
+        <button class="universe-btn" id="ess-mv-btn" onclick="switchEssUniverse('mv')">🔴 Marvel</button>
+      </div>
+
+      <!-- DC Essentials -->
+      <div id="ess-dc-panel">
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <p class="section-eyebrow eyebrow-dc">DC Universe</p>
+          <h2 class="section-title" style="font-size:1.5rem;">Choose Your Character</h2>
+        </div>
+
+        <div class="essentials-character-grid" id="dc-char-buttons"></div>
+
+        <div id="dc-essentials-result" class="glass-card" style="padding:2rem;display:none;"></div>
+      </div>
+
+      <!-- Marvel Essentials -->
+      <div id="ess-mv-panel" style="display:none;">
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <p class="section-eyebrow eyebrow-mv">Marvel Universe</p>
+          <h2 class="section-title" style="font-size:1.5rem;">Choose Your Character</h2>
+        </div>
+
+        <div class="essentials-character-grid" id="mv-char-buttons"></div>
+
+        <div id="mv-essentials-result" class="glass-card" style="padding:2rem;display:none;"></div>
+      </div>
+
+      <!-- Curated Entry Paths -->
+      <div class="divider-gold" style="margin:4rem 0 3rem;"></div>
+
+      <div class="section-header">
+        <p class="section-eyebrow eyebrow-gold">Curated Paths</p>
+        <h2 class="section-title">Best Entry Points</h2>
+        <p class="section-desc">Structured reading paths for new readers — no prior knowledge needed.</p>
+      </div>
+
+      <div class="grid-2" id="curated-paths"></div>
+    </div>
+
+    <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Miclass Cosmic Multiverse — Essentials</p>
+    </footer>
+  </div>
+
+  <script src="js/nav-template.js"></script>
+  <script src="js/roster.js"></script>
+  <script src="js/essentials.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

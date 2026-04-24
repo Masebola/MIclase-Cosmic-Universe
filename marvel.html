@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel Universe — Miclass Cosmic Multiverse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+  <div class="page-content">
+
+    <!-- Hero -->
+    <section class="hero" style="min-height:55vh;padding-top:8rem;padding-bottom:3rem;">
+      <p class="hero-eyebrow" style="color:var(--mv-secondary);">Silver Age → The Present</p>
+      <h1 class="hero-title">
+        <span class="line-mv">Marvel Universe</span>
+        <span class="line-white" style="font-size:0.45em;opacity:0.6;font-family:var(--font-heading);">Reading Roadmap</span>
+      </h1>
+      <p class="hero-sub">12 phases spanning 1961 to present — including the Ultimate Universe as a standalone track. From Lee & Kirby to Hickman's Ultimate relaunch.</p>
+      <div class="hero-actions">
+        <a href="essentials.html?u=mv" class="btn btn-mv">⭐ Marvel Essentials</a>
+        <a href="roster.html" class="btn btn-ghost">👥 Character Roster</a>
+      </div>
+    </section>
+
+    <!-- How to Read -->
+    <section style="padding:0 2rem 3rem;position:relative;z-index:1;">
+      <div class="container">
+        <div class="glass-card" style="padding:1.5rem 2rem;background:rgba(229,28,28,0.06);border-color:rgba(229,28,28,0.2);">
+          <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--mv-secondary);margin-bottom:0.5rem;">How to Use This Roadmap</p>
+          <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.7;">Read phases in order, or jump to the era that interests you. Phase 11 (Ultimate Universe) is a completely self-contained track — read it anytime after Phase 4. Each phase page lets you filter by character team or story type. <strong style="color:var(--text-primary);">Standalone Classics</strong> can be read any time, regardless of phase.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phase Grid -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow eyebrow-mv">The Roadmap</p>
+          <h2 class="section-title">All 12 Phases</h2>
+          <p class="section-desc">Click any phase to explore its full reading list with filters.</p>
+        </div>
+
+        <div id="mv-phase-grid" class="grid-auto"></div>
+      </div>
+    </section>
+
+    <!-- Standalone Classics -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow eyebrow-mv">Read Anytime</p>
+          <h2 class="section-title">Standalone Classics</h2>
+          <p class="section-desc">Self-contained masterpieces that don't require continuity knowledge.</p>
+        </div>
+        <div id="mv-standalones-grid" class="grid-auto"></div>
+      </div>
+    </section>
+
+    <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Miclass Cosmic Multiverse — Marvel Reading Roadmap</p>
+    </footer>
+  </div>
+
+  <script src="js/nav-template.js"></script>
+  <script src="js/phases-marvel.js"></script>
+  <script src="js/marvel.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

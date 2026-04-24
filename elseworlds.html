@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elseworlds — Miclass Cosmic Multiverse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+  <div class="page-content">
+
+    <section style="padding:8rem 2rem 3rem;text-align:center;position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;">Non-Canon · Black Label · Alternate Realities</p>
+      <h1 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin-bottom:1rem;">🌑 Elseworlds</h1>
+      <p style="color:var(--text-secondary);max-width:620px;margin:0 auto 1rem;font-size:0.92rem;line-height:1.7;">Stories that exist outside the main continuity — alternate timelines, Black Label prestige titles, the Absolute Universe, and classic What If tales. Read any time, in any order.</p>
+      <div class="glass-card" style="display:inline-block;padding:0.75rem 1.5rem;background:rgba(100,100,100,0.1);border-color:rgba(100,100,100,0.2);margin-top:0.5rem;">
+        <p style="font-size:0.8rem;color:var(--text-muted);">⚠️ These stories do NOT affect main continuity. They're bonus reads — some are the best comics ever made.</p>
+      </div>
+    </section>
+
+    <div class="container" style="position:relative;z-index:1;padding-bottom:5rem;">
+
+      <!-- Filter -->
+      <div style="margin-bottom:2rem;">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="ew-search" placeholder="Search Elseworlds...">
+        </div>
+        <div class="filter-bar" style="margin-top:1rem;justify-content:center;">
+          <span class="filter-label">Filter:</span>
+          <button class="filter-btn active" data-filter="all" onclick="filterEW('all', this)">All DC</button>
+          <button class="filter-btn" data-filter="Elseworlds" onclick="filterEW('Elseworlds', this)">Elseworlds</button>
+          <button class="filter-btn" data-filter="Black Label" onclick="filterEW('Black Label', this)">Black Label</button>
+          <button class="filter-btn" data-filter="Absolute Universe" onclick="filterEW('Absolute Universe', this)">Absolute Universe</button>
+          <button class="filter-btn" data-filter="Standalone" onclick="filterEW('Standalone', this)">Standalone</button>
+        </div>
+      </div>
+
+      <!-- DC Elseworlds -->
+      <div class="section-header">
+        <p class="section-eyebrow eyebrow-dc">DC</p>
+        <h2 class="section-title" style="font-size:1.8rem;">DC Elseworlds & Black Label</h2>
+        <p class="section-desc">From the first Elseworlds label (1989) to the current Absolute Universe.</p>
+      </div>
+
+      <div id="dc-ew-grid" class="grid-auto" style="margin-bottom:4rem;"></div>
+
+      <!-- Marvel Section Note -->
+      <div class="divider-gold"></div>
+
+      <div style="margin:3rem 0;padding:2rem;background:rgba(229,28,28,0.06);border:1px solid rgba(229,28,28,0.15);border-radius:var(--radius-lg);">
+        <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--mv-secondary);margin-bottom:0.75rem;">🔴 Marvel — What If? & Standalones</p>
+        <p style="font-size:0.87rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem;">Marvel's equivalent of Elseworlds are spread throughout the Marvel page as <strong style="color:var(--text-primary);">Standalone Classics</strong>. Stories like <em>Old Man Logan</em>, <em>Marvel 1602</em>, <em>What If?</em>, <em>Spider-Man: Life Story</em>, and <em>Old Man Hawkeye</em> are all non-canonical standalone stories listed on the Marvel phase pages or the Standalones section.</p>
+        <a href="marvel.html" class="btn btn-mv" style="font-size:0.7rem;padding:0.6rem 1.2rem;">Go to Marvel Page →</a>
+      </div>
+
+    </div>
+
+    <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Miclass Cosmic Multiverse — Elseworlds</p>
+    </footer>
+  </div>
+
+  <script src="js/nav-template.js"></script>
+  <script src="js/phases-dc.js"></script>
+  <script src="js/elseworlds.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

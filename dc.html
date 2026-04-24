@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DC Universe — Miclass Cosmic Multiverse</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+  <div class="page-content">
+
+    <!-- Hero -->
+    <section class="hero" style="min-height:55vh;padding-top:8rem;padding-bottom:3rem;">
+      <p class="hero-eyebrow" style="color:var(--dc-secondary);">Post-Crisis → Dawn of DC</p>
+      <h1 class="hero-title">
+        <span class="line-dc">DC Universe</span>
+        <span class="line-white" style="font-size:0.45em;opacity:0.6;font-family:var(--font-heading);">Reading Roadmap</span>
+      </h1>
+      <p class="hero-sub">10 phases spanning 1938 to present. Pick a phase to begin — or use the Essentials page if you just want the highlights for a specific character.</p>
+      <div class="hero-actions">
+        <a href="elseworlds.html" class="btn btn-ghost">🌑 Elseworlds</a>
+        <a href="essentials.html?u=dc" class="btn btn-dc">⭐ DC Essentials</a>
+      </div>
+    </section>
+
+    <!-- How to Read -->
+    <section style="padding:0 2rem 3rem;position:relative;z-index:1;">
+      <div class="container">
+        <div class="glass-card" style="padding:1.5rem 2rem;background:rgba(26,107,255,0.06);border-color:rgba(26,107,255,0.2);">
+          <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--dc-secondary);margin-bottom:0.5rem;">How to Use This Roadmap</p>
+          <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.7;">Read phases in order for full context, or jump to any phase that interests you. Each phase page has category filters so you can focus on Batman, Superman, Green Lantern, Titans, or any track you want. <strong style="color:var(--text-primary);">Elseworlds stories</strong> (non-canon, Black Label, alternate universe) have their own dedicated page — they're excluded from the main phases below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phase Grid -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow eyebrow-dc">The Roadmap</p>
+          <h2 class="section-title">All 10 Phases</h2>
+          <p class="section-desc">Click any phase to explore its full reading list with filters.</p>
+        </div>
+
+        <div id="dc-phase-grid" class="grid-auto"></div>
+      </div>
+    </section>
+
+    <!-- DC Elseworlds teaser -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="glass-card" style="padding:2.5rem;text-align:center;border-top:3px solid rgba(100,100,100,0.4);">
+          <div style="font-size:2rem;margin-bottom:1rem;">🌑</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;">DC Elseworlds & Black Label</h3>
+          <p style="color:var(--text-secondary);font-size:0.88rem;max-width:550px;margin:0 auto 1.5rem;line-height:1.7;">Non-canon stories, alternate timelines, Black Label prestige titles, and the Absolute Universe. Read any time — they exist outside the main continuity.</p>
+          <a href="elseworlds.html" class="btn btn-ghost">Explore Elseworlds →</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Miclass Cosmic Multiverse — DC Reading Roadmap</p>
+    </footer>
+  </div>
+
+  <script src="js/nav-template.js"></script>
+  <script src="js/phases-dc.js"></script>
+  <script src="js/dc.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phase 9 — Miclass Cosmic Multiverse</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+  <div class="page-content">
+
+    <!-- Phase Detail Hero (populated by JS) -->
+    <div class="phase-detail-hero" id="phase-detail-hero"></div>
+
+    <div class="container" style="position:relative;z-index:1;padding-bottom:5rem;">
+
+      <!-- Event Pause -->
+      <div id="event-pause-container"></div>
+
+      <!-- Search + Filter Bar -->
+      <div style="margin:2rem 0 1.5rem;">
+        <div class="search-wrapper" style="margin-bottom:1.5rem;">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="phase-search" placeholder="Search titles, characters, events...">
+        </div>
+        <div class="filter-bar" id="phase-filter-bar"></div>
+      </div>
+
+      <!-- Tracks -->
+      <div id="tracks-container"></div>
+
+      <!-- Phase Nav -->
+      <div class="divider-gold" style="margin:3rem 0 2rem;"></div>
+      <div id="phase-nav"></div>
+    </div>
+
+    <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Miclass Cosmic Multiverse — Phase 9</p>
+    </footer>
+  </div>
+
+  <script src="../js/nav-template.js"></script>
+  <script src="../js/phases-dc.js"></script>
+  <script src="../js/phases-marvel.js"></script>
+  <script src="../js/phase-renderer.js"></script>
+  <script src="../js/theme.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const phases = DC_PHASES;
+      const phase = phases.find(p => p.id === 9);
+      renderPhasePage(phase, 'dc');
+    });
+  </script>
+</body>
+</html>

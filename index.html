@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miclass Cosmic Multiverse (MCM)</title>
+  <meta name="description" content="Your definitive reading roadmap for DC and Marvel Comics — from the Golden Age to today.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+
+  <div class="page-content">
+    <!-- Hero with Background Image -->
+    <section class="hero hero-with-bg">
+      <div class="hero-bg-image" style="background-image: url('images/hero-multiverse.jpg');"></div>
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Navigate The Stories · Master The Timelines</p>
+        <h1 class="hero-title">
+          <span class="line-white">Miclass</span>
+          <span class="line-dc">Cosmic</span>
+          <span class="line-gold">Multiverse</span>
+        </h1>
+        <p class="hero-sub">Your definitive reading roadmap for DC and Marvel Comics — from the Golden Age to today.</p>
+        <div class="hero-actions">
+          <a href="dc.html" class="btn btn-dc">Enter DC</a>
+          <a href="marvel.html" class="btn btn-mv">Enter Marvel</a>
+          <a href="instructions.html" class="btn btn-ghost">How It Works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Universe Cards -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="grid-2">
+          <!-- DC Card -->
+          <a href="dc.html" class="glass-card animate-in" style="padding:2.5rem;text-decoration:none;display:block;border-top:3px solid var(--dc-primary);">
+            <div style="font-family:var(--font-display);font-size:2.5rem;margin-bottom:1rem;">⚡</div>
+            <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--dc-secondary);margin-bottom:0.75rem;">DC Universe</h2>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.7;">Post-Crisis through Dawn of DC. 10 phases spanning 1938 to present — Batman, Superman, Wonder Woman, and the entire Justice League across every era.</p>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+              <span style="font-size:0.72rem;font-family:var(--font-heading);color:var(--dc-secondary);padding:0.3rem 0.8rem;border:1px solid rgba(26,107,255,0.3);border-radius:4px;">10 Phases</span>
+              <span style="font-size:0.72rem;font-family:var(--font-heading);color:var(--text-muted);padding:0.3rem 0.8rem;border:1px solid var(--border-glass);border-radius:4px;">1938–Present</span>
+              <span style="font-size:0.72rem;font-family:var(--font-heading);color:var(--text-muted);padding:0.3rem 0.8rem;border:1px solid var(--border-glass);border-radius:4px;">Elseworlds Page →</span>
+            </div>
+          </a>
+
+          <!-- Marvel Card -->
+          <a href="marvel.html" class="glass-card animate-in" style="padding:2.5rem;text-decoration:none;display:block;border-top:3px solid var(--mv-primary);animation-delay:0.15s;">
+            <div style="font-family:var(--font-display);font-size:2.5rem;margin-bottom:1rem;">🔴</div>
+            <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--mv-secondary);margin-bottom:0.75rem;">Marvel Universe</h2>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.7;">Silver Age through the present. 12 phases (including the Ultimate Universe) from 1961 to today — Spider-Man, Avengers, X-Men, and every cosmic corner of the Marvel Universe.</p>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+              <span style="font-size:0.72rem;font-family:var(--font-heading);color:var(--mv-secondary);padding:0.3rem 0.8rem;border:1px solid rgba(229,28,28,0.3);border-radius:4px;">12 Phases</span>
+              <span style="font-size:0.72rem;font-family:var(--font-heading);color:var(--text-muted);padding:0.3rem 0.8rem;border:1px solid var(--border-glass);border-radius:4px;">1961–Present</span>
+              <span style="font-size:0.72rem;font-family:var(--font-heading);color:var(--text-muted);padding:0.3rem 0.8rem;border:1px solid var(--border-glass);border-radius:4px;">Standalones Included</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="divider-gold" style="margin:3rem 0;"></div>
+
+        <!-- Feature Cards -->
+        <div class="grid-3">
+          <a href="roster.html" class="glass-card animate-in" style="padding:2rem;text-decoration:none;display:block;animation-delay:0.1s;">
+            <div style="font-size:2rem;margin-bottom:1rem;">👥</div>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:0.5rem;">Character Roster</h3>
+            <p style="color:var(--text-secondary);font-size:0.83rem;line-height:1.6;">Look up any character from both universes. See their essential reading list and every phase they appear in.</p>
+          </a>
+
+          <a href="essentials.html" class="glass-card animate-in" style="padding:2rem;text-decoration:none;display:block;animation-delay:0.2s;">
+            <div style="font-size:2rem;margin-bottom:1rem;">⭐</div>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:0.5rem;">Essentials</h3>
+            <p style="color:var(--text-secondary);font-size:0.83rem;line-height:1.6;">Just want to read the best stuff? Pick a character and get the essential storylines without the full deep-dive.</p>
+          </a>
+
+          <a href="elseworlds.html" class="glass-card animate-in" style="padding:2rem;text-decoration:none;display:block;animation-delay:0.3s;">
+            <div style="font-size:2rem;margin-bottom:1rem;">🌑</div>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:0.5rem;">Elseworlds</h3>
+            <p style="color:var(--text-secondary);font-size:0.83rem;line-height:1.6;">Non-canon, Black Label, and alternate universe stories. Read anytime, outside the main continuity.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Picks -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow eyebrow-gold">Start Here</p>
+          <h2 class="section-title">Where To Begin</h2>
+          <p class="section-desc">Not sure where to jump in? Here are the best entry points for new readers.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="glass-card animate-in" style="padding:2rem;border-left:3px solid var(--dc-primary);">
+            <p style="font-family:var(--font-heading);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--dc-secondary);margin-bottom:0.75rem;">New to DC</p>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:0.5rem;">Batman: Year One</h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);margin-bottom:1rem;">Frank Miller & David Mazzucchelli. The definitive post-Crisis origin. 4 issues. Perfect first read.</p>
+            <a href="dc-phases/phase1.html" class="btn btn-dc" style="font-size:0.68rem;padding:0.6rem 1.2rem;">Go to Phase 1 →</a>
+          </div>
+
+          <div class="glass-card animate-in" style="padding:2rem;border-left:3px solid var(--mv-primary);animation-delay:0.15s;">
+            <p style="font-family:var(--font-heading);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--mv-secondary);margin-bottom:0.75rem;">New to Marvel</p>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:0.5rem;">Hawkeye by Matt Fraction</h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);margin-bottom:1rem;">Matt Fraction & David Aja. 22 issues of pure brilliance. No prior knowledge needed.</p>
+            <a href="marvel-phases/phase6.html" class="btn btn-mv" style="font-size:0.68rem;padding:0.6rem 1.2rem;">Go to Phase 6 →</a>
+          </div>
+
+          <div class="glass-card animate-in" style="padding:2rem;border-left:3px solid var(--dc-primary);animation-delay:0.1s;">
+            <p style="font-family:var(--font-heading);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--dc-secondary);margin-bottom:0.75rem;">DC Modern Entry</p>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:0.5rem;">Batman: The Court of Owls</h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);margin-bottom:1rem;">Scott Snyder & Greg Capullo. The defining New 52 Batman run. An instant classic.</p>
+            <a href="dc-phases/phase5.html" class="btn btn-dc" style="font-size:0.68rem;padding:0.6rem 1.2rem;">Go to Phase 5 →</a>
+          </div>
+
+          <div class="glass-card animate-in" style="padding:2rem;border-left:3px solid var(--mv-primary);animation-delay:0.25s;">
+            <p style="font-family:var(--font-heading);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--mv-secondary);margin-bottom:0.75rem;">Marvel Modern Entry</p>
+            <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;margin-bottom:0.5rem;">Immortal Hulk by Al Ewing</h3>
+            <p style="font-size:0.83rem;color:var(--text-secondary);margin-bottom:1rem;">Al Ewing & Joe Bennett. Horror, mythology, and the best Hulk story ever. 50 issues.</p>
+            <a href="marvel-phases/phase9.html" class="btn btn-mv" style="font-size:0.68rem;padding:0.6rem 1.2rem;">Go to Phase 9 →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Miclass Cosmic Multiverse (MCM) — Personal Comics Reading Guide</p>
+    </footer>
+  </div>
+
+  <script src="js/nav-template.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
