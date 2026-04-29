@@ -223,7 +223,7 @@ const CURATED_PATHS = [
   },
   {
     universe: 'mv',
-    title: "Doctor Doom: Villain to Icon",
+    title: "Fantastic Four",
     color: '#9b59b6',
     steps: [
       "Fantastic Four by Lee/Kirby (debut)",
