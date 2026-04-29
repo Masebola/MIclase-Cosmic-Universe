@@ -1,10 +1,3 @@
-Got it. I see that your `js/essentials.js` file handles both Marvel and DC character lists via two arrays: `DC_CHARACTERS` and `MARVEL_CHARACTERS`, which are then rendered as character buttons that open a view with their essential reading lists[cite: 7]. 
-
-Since your JS files expect these arrays to exist (though they aren't fully defined in the provided `essentials.js` snippet), we need to structure the new additions to match that exact format. 
-
-Here is the properly formatted JavaScript array structure for the massive list you provided. You should place this inside your `js/essentials.js` file, ensuring it defines the `DC_CHARACTERS` and `MARVEL_CHARACTERS` arrays that your script expects[cite: 7]. I've also incorporated your corrections for The Flash, ensuring "Into the abyss" is tagged as Issue 58 of the 1987 run, and "Linda and Wally's Mission" is noted as Issues 103 & 104[cite: 2, 3, 4].
-
-```javascript
 // js/essentials.js (Add or merge this with your existing file)
 
 const DC_CHARACTERS = [
@@ -489,4 +482,3 @@ const MARVEL_CHARACTERS = [
     ]
   }
 ];
-```
