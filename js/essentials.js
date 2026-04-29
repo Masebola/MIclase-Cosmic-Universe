@@ -1,487 +1,4 @@
-// js/essentials.js
-
-const DC_CHARACTERS = [
-  {
-    name: "Batman",
-    initial: "B",
-    alias: "Bruce Wayne",
-    tags: ["Gotham", "Justice League"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Foundations: Year One (Batman #404–407) — Miller & Mazzucchelli",
-      "Foundations: The Man Who Laughs — Ed Brubaker",
-      "Foundations: The Long Halloween — Loeb & Sale",
-      "Foundations: Dark Victory — Loeb & Sale",
-      "Core: A Death in the Family (Batman #426–429)",
-      "Core: Knightfall Saga",
-      "Core: No Man’s Land",
-      "Gotham Collapse: Bruce Wayne: Murderer? / Fugitive",
-      "Gotham Collapse: War Games",
-      "Modern: Hush — Loeb & Lee",
-      "Modern: Resurrection of Ra’s al Ghul"
-    ]
-  },
-  {
-    name: "Superman",
-    initial: "S",
-    alias: "Clark Kent",
-    tags: ["Metropolis", "Justice League"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Birthright — Mark Waid",
-      "Man of Steel — John Byrne",
-      "For All Seasons — Loeb & Sale",
-      "All-Star Superman — Grant Morrison",
-      "For Tomorrow — Azzarello & Lee",
-      "Up, Up and Away! — Johns & Busiek"
-    ]
-  },
-  {
-    name: "Wonder Woman",
-    initial: "W",
-    alias: "Diana Prince",
-    tags: ["Themyscira", "Justice League"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Wonder Woman (1987) #1–62 — George Pérez",
-      "Wonder Woman (2003) — Greg Rucka",
-      "The Hiketeia",
-      "Wonder Woman (2011) #1–35 — Brian Azzarello",
-      "Wonder Woman Rebirth — Rucka",
-      "Wonder Woman (2007–2010) — Gail Simone"
-    ]
-  },
-  {
-    name: "Green Lantern (Hal Jordan)",
-    initial: "H",
-    alias: "Hal Jordan",
-    tags: ["Cosmic", "Justice League"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Emerald Dawn I & II",
-      "Rebirth — Geoff Johns",
-      "Secret Origin",
-      "Sinestro Corps War",
-      "Blackest Night",
-      "Green Lantern by Geoff Johns #1–67"
-    ]
-  },
-  {
-    name: "Green Lantern (Kyle Rayner)",
-    initial: "K",
-    alias: "Kyle Rayner",
-    tags: ["Cosmic", "Justice League"],
-    phases: [2, 3, 4, 5],
-    essentials: [
-      "Green Lantern (1994) #48–125",
-      "The Final Night",
-      "Circle of Fire",
-      "The Power of Ion",
-      "Ion (2006–2007)",
-      "Omega Men — Tom King"
-    ]
-  },
-  {
-    name: "The Flash (Wally West)",
-    initial: "W",
-    alias: "Wally West",
-    tags: ["Central City", "Titans"],
-    phases: [1, 2, 3, 4, 5, 6, 8, 9, 10],
-    essentials: [
-      "Born to Run — Mark Waid",
-      "Terminal Velocity",
-      "The Return of Barry Allen",
-      "Into the Abyss (The Flash 1987 Issue #58)",
-      "Linda and Wally's Mission (The Flash #103–104 - Wally finds Linda, they battle a wolf)",
-      "Blitz"
-    ]
-  },
-  {
-    name: "The Flash (Barry Allen)",
-    initial: "B",
-    alias: "Barry Allen",
-    tags: ["Central City", "Justice League"],
-    phases: [4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Flash: Rebirth — Geoff Johns",
-      "Flashpoint",
-      "The Dastardly Death of the Rogues",
-      "Lightning Strikes Twice"
-    ]
-  },
-  {
-    name: "Aquaman",
-    initial: "A",
-    alias: "Arthur Curry",
-    tags: ["Atlantis", "Justice League"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Aquaman (1994) by Peter David",
-      "Aquaman (2011) #1–25 — Geoff Johns",
-      "Throne of Atlantis",
-      "Aquaman Rebirth — Dan Abnett",
-      "Aquaman (2015) — Jeff Parker"
-    ]
-  },
-  {
-    name: "Green Arrow & Black Canary",
-    initial: "G",
-    alias: "Oliver Queen & Dinah Lance",
-    tags: ["Star City", "Birds of Prey"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "The Longbow Hunters — Mike Grell",
-      "Green Arrow (1988) #1–80",
-      "Green Arrow (2001) — Kevin Smith",
-      "Green Arrow (2003–2007) — Judd Winick",
-      "Green Arrow Rebirth",
-      "Birds of Prey (Oracle & Canary era)"
-    ]
-  },
-  {
-    name: "Shazam / Black Adam",
-    initial: "S",
-    alias: "Billy Batson / Teth-Adam",
-    tags: ["Magic", "JSA"],
-    phases: [2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Power of Shazam (1994) — Jerry Ordway",
-      "JSA by Geoff Johns",
-      "52 (Weekly Series)",
-      "Shazam! (2013)",
-      "Black Adam: The Dark Age"
-    ]
-  },
-  {
-    name: "Justice League",
-    initial: "J",
-    alias: "JLA",
-    tags: ["Team", "Core"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "JLA #1–41 — Grant Morrison",
-      "Tower of Babel — Mark Waid",
-      "Justice League (2011) #1–50 — Geoff Johns",
-      "Justice League International",
-      "Justice League Dark (2011)",
-      "Justice League Rebirth"
-    ]
-  },
-  {
-    name: "Justice Society of America",
-    initial: "J",
-    alias: "JSA",
-    tags: ["Team", "Legacy"],
-    phases: [2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "JSA (1999) — Geoff Johns",
-      "JSA: The Golden Age — James Robinson",
-      "Justice Society of America: The Next Age"
-    ]
-  },
-  {
-    name: "Nightwing",
-    initial: "N",
-    alias: "Dick Grayson",
-    tags: ["Blüdhaven", "Bat-Family"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "A Knight in Blüdhaven (Nightwing #1–8)",
-      "The Judas Contract",
-      "The Black Mirror (Detective Comics #871–881)",
-      "Batman & Robin (Dick as Batman) — Grant Morrison",
-      "Grayson",
-      "Leaping Into the Light (Nightwing #78–83)"
-    ]
-  },
-  {
-    name: "Barbara Gordon",
-    initial: "B",
-    alias: "Batgirl / Oracle",
-    tags: ["Gotham", "Birds of Prey"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Batgirl: Year One",
-      "The Killing Joke",
-      "Birds of Prey (Oracle/Black Canary era)",
-      "Birds of Prey: Manhunt",
-      "Black Canary/Oracle: Birds of Prey"
-    ]
-  },
-  {
-    name: "Bat-Family (Tim, Cass, Steph)",
-    initial: "B",
-    alias: "Robin / Batgirl",
-    tags: ["Gotham", "Legacy"],
-    phases: [2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Cassandra: Batgirl #1–6: Silent Knight",
-      "Cassandra: Batgirl #25–37: A Knight Alone",
-      "Cassandra: Shadow of the Batgirl",
-      "Stephanie: Batgirl Rising (#1–7)",
-      "Stephanie: The Flood (#9–14)",
-      "Stephanie: The Lesson (#15–24)",
-      "Tim: Robin (1993) full run",
-      "Tim: Young Justice (1998–2003)",
-      "Tim: Teen Titans (2003)",
-      "Tim: Red Robin (2009)"
-    ]
-  },
-  {
-    name: "Richard Dragon & Lady Shiva",
-    initial: "R",
-    alias: "Martial Artists",
-    tags: ["Street Level"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Richard Dragon, Kung Fu Fighter #1–18",
-      "The Question (1987) #1–36",
-      "Birds of Prey #56–67",
-      "Batgirl #73",
-      "Batman: Brotherhood of the Fist"
-    ]
-  },
-  {
-    name: "Teen Titans",
-    initial: "T",
-    alias: "Titans / Young Justice",
-    tags: ["Team", "Legacy"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Original: New Teen Titans (1980) — Wolfman & Pérez",
-      "Original: The Judas Contract",
-      "Original: Teen Titans: Year One",
-      "Original: Titans (1999–2003)",
-      "Legacy: Young Justice #1–55 — Peter David",
-      "Legacy: Teen Titans (2003) #1–100 — Geoff Johns"
-    ]
-  },
-  {
-    name: "Sandman",
-    initial: "S",
-    alias: "Dream / Morpheus",
-    tags: ["Vertigo", "Magic"],
-    phases: [1, 2, 3, 4],
-    essentials: [
-      "Preludes & Nocturnes (#1–8)",
-      "The Doll’s House (#9–16)",
-      "Season of Mists (#21–28)",
-      "Brief Lives (#41–49)"
-    ]
-  },
-  {
-    name: "John Constantine",
-    initial: "J",
-    alias: "Hellblazer",
-    tags: ["Vertigo", "Magic"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "Hellblazer #1–300",
-      "Original Sins (#1–9)",
-      "Dangerous Habits (#41–46)",
-      "Hard Time (#146–150)"
-    ]
-  },
-  {
-    name: "New Gods",
-    initial: "N",
-    alias: "Fourth World",
-    tags: ["Cosmic"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    essentials: [
-      "New Gods (1971) — Jack Kirby",
-      "Mister Miracle (1971)",
-      "Orion (2000–2002) — Walt Simonson",
-      "The Fourth World Omnibus",
-      "Death of the New Gods",
-      "Final Crisis"
-    ]
-  }
-];
-
-const MARVEL_CHARACTERS = [
-  {
-    name: "Avengers",
-    initial: "A",
-    alias: "Earth's Mightiest",
-    tags: ["Team", "Core"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Avengers Disassembled",
-      "New Avengers: Breakout",
-      "The Ultimates",
-      "Avengers by Kurt Busiek",
-      "Avengers by Jonathan Hickman",
-      "Secret Wars"
-    ]
-  },
-  {
-    name: "X-Men",
-    initial: "X",
-    alias: "Mutants",
-    tags: ["Team", "Mutants"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Dark Phoenix Saga (Uncanny #129–137)",
-      "Days of Future Past (Uncanny #141–142)",
-      "New X-Men — Grant Morrison",
-      "Astonishing X-Men",
-      "House of X / Powers of X"
-    ]
-  },
-  {
-    name: "Spider-Man",
-    initial: "S",
-    alias: "Peter Parker",
-    tags: ["Street Level", "Avengers"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "The Night Gwen Stacy Died (ASM #121–122)",
-      "Kraven’s Last Hunt",
-      "The Clone Saga",
-      "Big Time (ASM #648–656)",
-      "Spider-Man: Blue"
-    ]
-  },
-  {
-    name: "Fantastic Four",
-    initial: "F",
-    alias: "First Family",
-    tags: ["Team", "Cosmic"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Fantastic Four #1–10",
-      "The Galactus Trilogy (FF #48–50)",
-      "Fantastic Four by Mark Waid",
-      "Fantastic Four by Jonathan Hickman"
-    ]
-  },
-  {
-    name: "Thor",
-    initial: "T",
-    alias: "God of Thunder",
-    tags: ["Asgard", "Avengers"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Thor #337–382 — Walt Simonson",
-      "Thor (2007) #1–12",
-      "Thor: God of Thunder #1–25 — Jason Aaron"
-    ]
-  },
-  {
-    name: "Captain America",
-    initial: "C",
-    alias: "Steve Rogers",
-    tags: ["Avengers", "Espionage"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Winter Soldier",
-      "Man Out of Time",
-      "Death of Captain America",
-      "The Ultimates"
-    ]
-  },
-  {
-    name: "Iron Man",
-    initial: "I",
-    alias: "Tony Stark",
-    tags: ["Avengers", "Tech"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Demon in a Bottle (#120–128)",
-      "Armor Wars",
-      "Extremis (#1–6)",
-      "The Five Nightmares (#1–7)"
-    ]
-  },
-  {
-    name: "Daredevil",
-    initial: "D",
-    alias: "Matt Murdock",
-    tags: ["Street Level", "Defenders"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "The Man Without Fear",
-      "Born Again (#227–233)",
-      "Daredevil Vol. 2 #26–50, #56–81",
-      "Daredevil by Mark Waid #1–36"
-    ]
-  },
-  {
-    name: "Wolverine",
-    initial: "W",
-    alias: "Logan",
-    tags: ["Mutants", "X-Men"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Wolverine (1982) #1–4",
-      "Weapon X (Marvel Comics Presents #72–84)",
-      "Old Man Logan",
-      "Wolverine and the X-Men"
-    ]
-  },
-  {
-    name: "Black Panther",
-    initial: "B",
-    alias: "T'Challa",
-    tags: ["Wakanda", "Avengers"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Black Panther (1998) #1–33 — Christopher Priest",
-      "A Nation Under Our Feet — Ta-Nehisi Coates",
-      "Black Panther (2016) #1–18"
-    ]
-  },
-  {
-    name: "Venom",
-    initial: "V",
-    alias: "Eddie Brock",
-    tags: ["Spider-Verse", "Cosmic"],
-    phases: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Birth of Venom (ASM #298–300)",
-      "Lethal Protector",
-      "Venom by Donny Cates #1–35"
-    ]
-  },
-  {
-    name: "Nova",
-    initial: "N",
-    alias: "Richard Rider",
-    tags: ["Cosmic"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Nova (1976) #1–25",
-      "Annihilation: Nova #1–4",
-      "Nova (2007) #1–25"
-    ]
-  },
-  {
-    name: "Jessica Jones",
-    initial: "J",
-    alias: "Jewel",
-    tags: ["Street Level", "Defenders"],
-    phases: [4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Alias #1–28",
-      "The Pulse #1–14",
-      "Jessica Jones (2016) #1–18"
-    ]
-  },
-  {
-    name: "Doctor Doom",
-    initial: "D",
-    alias: "Victor Von Doom",
-    tags: ["Villain", "Latveria"],
-    phases: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    essentials: [
-      "Books of Doom",
-      "Fantastic Four #570–588 — Jonathan Hickman",
-      "FF #1–23",
-      "Doctor Doom and the Masters of Evil"
-    ]
-  }
-];
+// essentials.js
 
 const CURATED_PATHS = [
   {
@@ -489,70 +6,138 @@ const CURATED_PATHS = [
     title: "The Batman Starter Pack",
     color: 'var(--dc-secondary)',
     steps: [
-      "Batman: Year One (Batman #404-407)",
-      "Batman: The Long Halloween",
-      "Batman: The Killing Joke",
-      "Batman: Knightfall Vol. 1 (Broken Bat)",
-      "Batman: Hush",
-      "Batman: The Court of Owls"
+      "Batman: Year One (Batman #404–407) — Frank Miller",
+      "Batman: The Man Who Laughs — Ed Brubaker",
+      "Batman: The Long Halloween — Jeph Loeb & Tim Sale",
+      "Batman: A Death in the Family — Jim Starlin",
+      "Batman: Knightfall Saga (1993–1994)",
+      "Batman: No Man's Land (1999)",
+      "Batman: Hush — Loeb & Jim Lee",
+      "Batman: The Court of Owls — Scott Snyder & Greg Capullo"
     ],
-    note: "6 stories. Covers origin through modern era. Zero prior knowledge needed."
+    note: "8 stories. Covers origin through modern era. Zero prior knowledge needed."
   },
   {
-    universe: 'mv',
-    title: "The Spider-Man Starter Pack",
-    color: 'var(--mv-secondary)',
+    universe: 'dc',
+    title: "Superman: Man of Tomorrow",
+    color: '#f87171',
     steps: [
-      "Amazing Spider-Man by Lee/Ditko (#1-38)",
-      "Spider-Man: Kraven's Last Hunt",
-      "Daredevil: Born Again (context for Peter's world)",
-      "Spider-Man: The Alien Costume Saga",
-      "Superior Spider-Man",
-      "Hawkeye by Matt Fraction (bonus: best of the era)"
+      "Superman: The Man of Steel — John Byrne",
+      "Superman: Birthright — Mark Waid",
+      "Superman: For All Seasons — Loeb & Sale",
+      "Superman: For Tomorrow — Azzarello & Jim Lee",
+      "All-Star Superman — Grant Morrison",
+      "Superman: Brainiac — Geoff Johns",
+      "Superman: Rebirth by Peter Tomasi",
+      "Superman: The Warworld Saga"
     ],
-    note: "6 stories. From origin to modern Spidey. Great standalone reads."
+    note: "Superman across every era. Ends with his greatest modern story."
   },
   {
     universe: 'dc',
     title: "Green Lantern: The Johns Era",
     color: '#4ade80',
     steps: [
-      "Green Lantern: Rebirth",
+      "Green Lantern: Emerald Dawn I & II",
+      "Green Lantern: Rebirth — Geoff Johns",
       "Green Lantern: No Fear",
-      "Sinestro Corps War",
       "Green Lantern: Secret Origin",
+      "Sinestro Corps War",
       "Blackest Night",
       "Brightest Day"
     ],
-    note: "Geoff Johns' complete GL saga. Self-contained epic."
-  },
-  {
-    universe: 'mv',
-    title: "The X-Men Essentials",
-    color: '#f87171',
-    steps: [
-      "X-Men: Dark Phoenix Saga (Uncanny #129-137)",
-      "X-Men: Days of Future Past (#141-142)",
-      "Wolverine (1982) by Frank Miller",
-      "New X-Men by Grant Morrison",
-      "Astonishing X-Men by Whedon",
-      "House of X / Powers of X by Hickman"
-    ],
-    note: "The definitive X-Men reading path across 4 decades."
+    note: "Geoff Johns' complete GL saga. Self-contained epic spanning 6 years."
   },
   {
     universe: 'dc',
     title: "The Flash: Legacy of Speed",
     color: '#facc15',
     steps: [
-      "The Flash: Born to Run (Wally's origin)",
-      "The Flash by Mark Waid Book 1-3",
+      "The Flash: Born to Run — Mark Waid (Wally's origin)",
+      "The Flash by Mark Waid: Books 1–3",
       "The Flash: Terminal Velocity",
+      "Flash: Rebirth (2009) — Geoff Johns",
+      "Flashpoint (2011)",
       "DC Universe: Rebirth #1",
       "The Flash (Rebirth) by Joshua Williamson",
       "Titans: The Return of Wally West"
     ],
-    note: "Follows Wally West from sidekick to legend."
+    note: "Follows both Barry Allen and Wally West across the Speed Force legacy."
+  },
+  {
+    universe: 'dc',
+    title: "Wonder Woman: From Pérez to Rucka",
+    color: '#c084fc',
+    steps: [
+      "Wonder Woman (1987) #1–24 — George Pérez",
+      "Wonder Woman: The Hiketeia — Greg Rucka",
+      "Wonder Woman (2003) by Greg Rucka",
+      "Wonder Woman (2011) #1–35 — Brian Azzarello",
+      "Wonder Woman: Rebirth (2016) — Rucka",
+      "Wonder Woman by Gail Simone (2007–2010)"
+    ],
+    note: "Three decades of essential Diana Prince — myth, war, and diplomacy."
+  },
+  {
+    universe: 'dc',
+    title: "The Bat-Family Expanded",
+    color: '#60a5fa',
+    steps: [
+      "Batman: Year One — Frank Miller (foundation)",
+      "Batgirl: Year One (Barbara's origin)",
+      "New Teen Titans: The Judas Contract — Dick Grayson era",
+      "Robin (1993) full run — Tim Drake",
+      "Batman: Under the Hood — Jason Todd returns",
+      "Batgirl (2000) by Kelley Puckett — Cassandra Cain",
+      "Batgirl Rising (2009) — Stephanie Brown",
+      "Nightwing: Leaping Into the Light — Tom Taylor"
+    ],
+    note: "Every major Robin and Batgirl — a comprehensive guide to the Bat-Family tree."
+  },
+  {
+    universe: 'dc',
+    title: "DC Cosmic & New Gods",
+    color: '#f59e0b',
+    steps: [
+      "Jack Kirby's Fourth World Omnibus",
+      "New Gods (1971) — Jack Kirby",
+      "Mister Miracle (1971) — Kirby",
+      "Final Crisis — Grant Morrison",
+      "Justice League: The Darkseid War",
+      "The Sandman: Preludes & Nocturnes — Neil Gaiman",
+      "Hellblazer: Dangerous Habits — Garth Ennis"
+    ],
+    note: "The mythic foundations of the DC Universe — from Kirby to Gaiman."
+  },
+  {
+    universe: 'mv',
+    title: "The Spider-Man Starter Pack",
+    color: 'var(--mv-secondary)',
+    steps: [
+      "Amazing Spider-Man by Lee/Ditko (#1–38)",
+      "The Night Gwen Stacy Died (ASM #121–122)",
+      "Spider-Man: Kraven's Last Hunt",
+      "Spider-Man: The Alien Costume Saga (Birth of Venom)",
+      "Spider-Man: Blue (2002)",
+      "Superior Spider-Man",
+      "Hawkeye by Matt Fraction (bonus: best of the era)"
+    ],
+    note: "7 stories. From origin to modern Spidey. Great standalone reads."
+  },
+  {
+    universe: 'mv',
+    title: "The X-Men Essentials",
+    color: '#f87171',
+    steps: [
+      "X-Men: Dark Phoenix Saga (Uncanny #129–137)",
+      "X-Men: Days of Future Past (#141–142)",
+      "Wolverine (1982) — Frank Miller & Claremont",
+      "X-Men: God Loves, Man Kills",
+      "New X-Men by Grant Morrison",
+      "Astonishing X-Men by Joss Whedon",
+      "House of X / Powers of X by Jonathan Hickman"
+    ],
+    note: "The definitive X-Men reading path across 4 decades."
   },
   {
     universe: 'mv',
@@ -564,37 +149,91 @@ const CURATED_PATHS = [
       "House of M",
       "Civil War",
       "Secret Invasion",
-      "Avengers by Jonathan Hickman → Secret Wars"
+      "Avengers by Jonathan Hickman → Secret Wars (2015)"
     ],
     note: "From Bronze Age to Secret Wars. The spine of Avengers history."
-  },
-  {
-    universe: 'dc',
-    title: "Superman: Man of Tomorrow",
-    color: '#f87171',
-    steps: [
-      "Superman: The Man of Steel by John Byrne",
-      "Death and Return of Superman",
-      "Superman: Brainiac by Geoff Johns",
-      "All-Star Superman (Elseworlds — but essential)",
-      "Superman: Rebirth by Peter Tomasi",
-      "Superman: The Warworld Saga"
-    ],
-    note: "Superman across every era. Ends with his greatest modern story."
   },
   {
     universe: 'mv',
     title: "The Cosmic Marvel Path",
     color: '#c084fc',
     steps: [
-      "Fantastic Four: The Galactus Trilogy (FF #48-50)",
-      "Thanos Quest + Infinity Gauntlet",
-      "Annihilation + Annihilation Conquest",
-      "Guardians of the Galaxy (2008) by DnA",
+      "Fantastic Four: The Galactus Trilogy (FF #48–50)",
+      "Thanos Quest + The Infinity Gauntlet",
+      "Annihilation + Annihilation: Conquest",
+      "Guardians of the Galaxy (2008) by Abnett & Lanning",
       "Thanos Imperative",
       "Guardians of the Galaxy (2020) by Al Ewing"
     ],
     note: "Marvel's cosmic landscape from Galactus to the modern Guardians."
+  },
+  {
+    universe: 'mv',
+    title: "Daredevil: The Hell's Kitchen Trilogy",
+    color: '#fb923c',
+    steps: [
+      "Daredevil: The Man Without Fear (1993) — Frank Miller",
+      "Daredevil: Born Again (#227–233, 1986)",
+      "Daredevil Vol. 2 #26–50, #56–81 — Bendis & Maleev",
+      "Daredevil by Mark Waid #1–36 (2011–2014)"
+    ],
+    note: "The four pillars of Daredevil — Miller, Bendis, and Waid define Hell's Kitchen."
+  },
+  {
+    universe: 'mv',
+    title: "Iron Man: Tech & Fall",
+    color: '#facc15',
+    steps: [
+      "Iron Man: Demon in a Bottle (#120–128, 1979)",
+      "Iron Man: Armor Wars (1987–1988)",
+      "Iron Man: Extremis (#1–6, 2005)",
+      "Iron Man: The Five Nightmares (#1–7, 2008)",
+      "Invincible Iron Man by Matt Fraction",
+      "Civil War"
+    ],
+    note: "Tony Stark's defining arcs — addiction, legacy, responsibility, and Civil War."
+  },
+  {
+    universe: 'mv',
+    title: "Captain America: Soldier & Symbol",
+    color: '#60a5fa',
+    steps: [
+      "Captain America: Winter Soldier — Ed Brubaker",
+      "Captain America: Death of Captain America — Brubaker",
+      "Captain America: Man Out of Time (2010)",
+      "Civil War",
+      "Secret Invasion",
+      "The Ultimates (2002–2004) — Mark Millar"
+    ],
+    note: "From the Winter Soldier to Civil War — Steve Rogers' modern renaissance."
+  },
+  {
+    universe: 'mv',
+    title: "Street Level Marvel",
+    color: '#4ade80',
+    steps: [
+      "Alias #1–28 — Brian Michael Bendis (Jessica Jones)",
+      "Hawkeye by Matt Fraction & David Aja",
+      "Daredevil: Born Again — Frank Miller",
+      "Punisher (2000) — Garth Ennis & Dillon",
+      "Moon Knight by Jeff Lemire",
+      "She-Hulk by Dan Slott"
+    ],
+    note: "The best of Marvel's street-level heroes — no capes required."
+  },
+  {
+    universe: 'mv',
+    title: "Doctor Doom: Villain to Icon",
+    color: '#9b59b6',
+    steps: [
+      "Fantastic Four by Lee/Kirby (debut)",
+      "Books of Doom (2005)",
+      "Fantastic Four #570–588 — Jonathan Hickman",
+      "FF #1–23 — Jonathan Hickman",
+      "Infamous Iron Man (2016) — Brian Michael Bendis",
+      "Doctor Doom and the Masters of Evil"
+    ],
+    note: "Victor Von Doom — from Silver Age villain to one of Marvel's greatest characters."
   }
 ];
 
@@ -688,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dcBtns = document.getElementById('dc-char-buttons');
   if (dcBtns && typeof DC_CHARACTERS !== 'undefined') {
     dcBtns.innerHTML = DC_CHARACTERS.map(c => `
-      <button class="essentials-char-btn" onclick='selectChar(${JSON.stringify(c)}, "dc")'>${c.name}</button>
+      <button class="essentials-char-btn" onclick='selectChar(${JSON.stringify(c).replace(/'/g, "&#39;")}, "dc")'>${c.name}</button>
     `).join('');
   }
 
