@@ -49,9 +49,12 @@ function openStarterModal(universe, charId) {
     <div class="starter-modal-header">
       <div class="starter-modal-initial" style="background:${char.color || accentColor};">${char.initial}</div>
       <div class="starter-modal-title-group">
-        <h2 class="starter-modal-title">${char.name}</h2>
+        <h2 class="starter-modal-title" id="starter-modal-title">${char.name}</h2>
         <p class="starter-modal-alias">${char.alias || ''}</p>
       </div>
+      <button class="starter-modal-close" onclick="closeStarterModal()" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
 
     <div class="starter-modal-categories">
