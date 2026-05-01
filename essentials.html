@@ -11,54 +11,53 @@
   <div class="page-content">
 
     <section style="padding:8rem 2rem 2rem;text-align:center;position:relative;z-index:1;">
-      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">For Casual Readers</p>
-      <h1 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin-bottom:1rem;">⭐ Essentials</h1>
-      <p style="color:var(--text-secondary);max-width:620px;margin:0 auto 0.75rem;font-size:0.92rem;line-height:1.7;">Don't want to read every phase? Pick a character or event and get the key storylines — no deep-dive required. These are the stories that define each character's legacy.</p>
-      <p style="color:var(--text-muted);font-size:0.8rem;max-width:500px;margin:0 auto 2rem;">Perfect for people who want to understand a character before jumping into current runs.</p>
+      <p style="font-family:var(--font-heading);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">For Beginners</p>
+      <h1 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin-bottom:1rem;">Essentials</h1>
+      <p style="color:var(--text-secondary);max-width:620px;margin:0 auto 0.75rem;font-size:0.92rem;line-height:1.7;">Pick a character and get their complete starter pack. From foundations to modern essentials — curated reading lists that cover everything you need to understand each character.</p>
+      <p style="color:var(--text-muted);font-size:0.8rem;max-width:500px;margin:0 auto 2rem;">Perfect for new readers who want a structured path into the comics.</p>
     </section>
 
     <div class="container" style="position:relative;z-index:1;padding-bottom:5rem;">
 
       <!-- Universe Toggle -->
       <div class="universe-switch-bar" style="margin-bottom:2rem;">
-        <button class="universe-btn dc-active" id="ess-dc-btn" onclick="switchEssUniverse('dc')">⚡ DC</button>
-        <button class="universe-btn" id="ess-mv-btn" onclick="switchEssUniverse('mv')">🔴 Marvel</button>
+        <button class="universe-btn dc-active" id="ess-dc-btn" onclick="switchEssUniverse('dc')">DC Universe</button>
+        <button class="universe-btn" id="ess-mv-btn" onclick="switchEssUniverse('mv')">Marvel Universe</button>
       </div>
 
-      <!-- DC Essentials -->
+      <!-- DC Starter Packs -->
       <div id="ess-dc-panel">
-        <div class="section-header" style="margin-bottom:1.5rem;">
+        <div class="section-header" style="margin-bottom:2rem;">
           <p class="section-eyebrow eyebrow-dc">DC Universe</p>
-          <h2 class="section-title" style="font-size:1.5rem;">Choose Your Character</h2>
+          <h2 class="section-title" style="font-size:1.5rem;">Character Starter Packs</h2>
+          <p class="section-desc">Select any character to see their complete reading roadmap.</p>
         </div>
 
-        <div class="essentials-character-grid" id="dc-char-buttons"></div>
-
-        <div id="dc-essentials-result" class="glass-card" style="padding:2rem;display:none;"></div>
+        <div class="starter-catalog" id="dc-starter-catalog"></div>
       </div>
 
-      <!-- Marvel Essentials -->
+      <!-- Marvel Starter Packs -->
       <div id="ess-mv-panel" style="display:none;">
-        <div class="section-header" style="margin-bottom:1.5rem;">
+        <div class="section-header" style="margin-bottom:2rem;">
           <p class="section-eyebrow eyebrow-mv">Marvel Universe</p>
-          <h2 class="section-title" style="font-size:1.5rem;">Choose Your Character</h2>
+          <h2 class="section-title" style="font-size:1.5rem;">Character Starter Packs</h2>
+          <p class="section-desc">Select any character to see their complete reading roadmap.</p>
         </div>
 
-        <div class="essentials-character-grid" id="mv-char-buttons"></div>
-
-        <div id="mv-essentials-result" class="glass-card" style="padding:2rem;display:none;"></div>
+        <div class="starter-catalog" id="mv-starter-catalog"></div>
       </div>
 
-      <!-- Curated Entry Paths -->
-      <div class="divider-gold" style="margin:4rem 0 3rem;"></div>
+    </div>
 
-      <div class="section-header">
-        <p class="section-eyebrow eyebrow-gold">Curated Paths</p>
-        <h2 class="section-title">Best Entry Points</h2>
-        <p class="section-desc">Structured reading paths for new readers — no prior knowledge needed.</p>
+    <!-- Starter Pack Modal -->
+    <div id="starter-modal" class="starter-modal" style="display:none;">
+      <div class="starter-modal-overlay" onclick="closeStarterModal()"></div>
+      <div class="starter-modal-content">
+        <button class="starter-modal-close" onclick="closeStarterModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div id="starter-modal-body"></div>
       </div>
-
-      <div class="grid-2" id="curated-paths"></div>
     </div>
 
     <footer style="padding:3rem 2rem;text-align:center;border-top:1px solid var(--border-glass);position:relative;z-index:1;">
@@ -67,7 +66,8 @@
   </div>
 
   <script src="js/nav-template.js"></script>
-  <script src="js/roster.js"></script>
+  <script src="js/dc-starters.js"></script>
+  <script src="js/marvel-starters.js"></script>
   <script src="js/essentials.js"></script>
   <script src="js/theme.js"></script>
 </body>

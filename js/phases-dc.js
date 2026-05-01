@@ -10,17 +10,19 @@ const DC_PHASES = [
     tracks: [
       {
         icon: "⚡",
-        title: "Justice League",
+        title: "The Flash",
         items: [
-          { title: "Justice League of America: The Silver Age Vol. 1-2", issues: "The Brave and the Bold #28-30, JLA #1-16", tags: ["essential"], note: "The team's formation. Establishes the classic League." },
+          { title: "The Flash: The Silver Age Vol. 1-2", issues: "Showcase #4, 8, 13-14, The Flash #105-132", tags: ["essential"], note: "Barry Allen's debut and early adventures." },
+          { title: "The Flash: Flash of Two Worlds", issues: "The Flash #123 (1961)", tags: ["essential"], note: "Jay Garrick meets Barry Allen. The Multiverse is introduced." },
+          { title: "The Flash: The Death of Iris West", issues: "The Flash #275-284 (1979-1980)", note: "Professor Zoom murders Iris West. A pivotal tragedy in Barry's life." },
         ]
       },
       {
-        icon: "🦇",
-        title: "Batman",
+        icon: "🏛",
+        title: "Justice League / JSA",
         items: [
-          { title: "Batman: The Greatest Stories Ever Told", issues: "Various issues", note: "Sampler of Golden/Silver Age Batman." },
-          { title: "Batman: Strange Apparitions", issues: "Detective Comics #469-476, 478-479", note: "The late Bronze Age run that modernized Batman." },
+          { title: "Justice League of America: The Silver Age Vol. 1-2", issues: "The Brave and the Bold #28-30, JLA #1-16", tags: ["essential"], note: "The team's formation. Establishes the classic League." },
+          { title: "Justice League of America: Origin of the Justice League", issues: "Justice League of America #9 (1962)", note: "The official retelling of how the League formed against Starro." },
         ]
       },
       {
@@ -28,21 +30,16 @@ const DC_PHASES = [
         title: "Superman",
         items: [
           { title: "Superman: The Greatest Stories Ever Told", issues: "Various issues", note: "Sampler of Golden/Silver Age Superman." },
-          { title: "Superman: Kryptonite Nevermore", issues: "Superman #233-238, 240-242", note: "The Bronze Age story where Kryptonite's effects change." },
+          { title: "Superman Annual #11: For the Man Who Has Everything", issues: "Superman Annual #11 (1985)", tags: ["essential"], note: "Alan Moore's masterpiece. Mongul traps Superman in a dream of Krypton." },
+          { title: "Whatever Happened to the Man of Tomorrow?", issues: "Superman #423 & Action Comics #583 (1986)", tags: ["essential"], note: "Alan Moore's farewell to the Silver Age Superman. An ending before Crisis." },
         ]
       },
       {
-        icon: "👑",
-        title: "Wonder Woman",
+        icon: "🦇",
+        title: "Batman",
         items: [
-          { title: "Wonder Woman: The Golden Age Omnibus Vol. 1", issues: "All-Star Comics #8, Sensation Comics #1-24, Wonder Woman #1-7", note: "Her earliest adventures." },
-        ]
-      },
-      {
-        icon: "⚡",
-        title: "Flash",
-        items: [
-          { title: "The Flash: The Silver Age Vol. 1-2", issues: "Showcase #4, 8, 13-14, The Flash #105-132", note: "Barry Allen's debut and early adventures.", tags: ["essential"] },
+          { title: "Batman: The Joker's Five-Way Revenge", issues: "Batman #251 (1973)", note: "Denny O'Neil and Neal Adams return Joker to his murderous roots." },
+          { title: "Batman: Strange Apparitions (The Englehart-Rogers Run)", issues: "Detective Comics #469-476 (1977-1978)", tags: ["essential"], note: "The definitive Bronze Age Batman. Introduces Hugo Strange's obsession." },
         ]
       },
       {
@@ -50,27 +47,32 @@ const DC_PHASES = [
         title: "Green Lantern",
         items: [
           { title: "Green Lantern: The Silver Age Vol. 1-2", issues: "Showcase #22-24, Green Lantern #1-9", note: "Hal Jordan's debut and early adventures." },
+          { title: "Green Lantern/Green Arrow: Hard Traveling Heroes", issues: "Green Lantern #76-89 (1970-1972)", tags: ["essential"], note: "Denny O'Neil and Neal Adams confront social issues. Speedy's addiction. A turning point." },
         ]
       },
       {
-        icon: "🏹",
-        title: "Green Arrow",
+        icon: "👑",
+        title: "Wonder Woman",
         items: [
-          { title: "Green Arrow: The Golden Age Vol. 1", issues: "More Fun Comics #73-107, Adventure Comics #103-117", note: "His earliest appearances." },
+          { title: "Wonder Woman: The Golden Age Omnibus", issues: "All-Star Comics #8, Sensation Comics #1-24, Wonder Woman #1-7", note: "Her earliest adventures." },
+          { title: "Wonder Woman: The Twelve Labors", issues: "Wonder Woman #212-222 (1974-1976)", note: "Diana must prove herself to return to the Justice League. Guest-stars from across DC." },
         ]
       },
       {
         icon: "🌌",
-        title: "Cosmic Foundations",
+        title: "Jack Kirby's Fourth World",
         items: [
-          { title: "Jack Kirby's Fourth World Omnibus", issues: "New Gods #1-11, Forever People #1-11, Mister Miracle #1-18, Jimmy Olsen #133-148", note: "The original New Gods saga. Introduces Darkseid, Orion, the Anti-Life Equation.", tags: ["essential"] },
+          { title: "Superman's Pal Jimmy Olsen #133-148", issues: "Jimmy Olsen #133-148 (1970-1972)", note: "Kirby's entry point into the Fourth World. Introduces the DNA Project and Intergang." },
+          { title: "The New Gods #1-11", issues: "New Gods #1-11 (1971-1972)", tags: ["essential"], note: "The war between New Genesis and Apokolips. Orion, Lightray, Highfather, and Darkseid's full mythology." },
+          { title: "The Forever People #1-11", issues: "Forever People #1-11 (1971-1972)", note: "Young New Gods on Earth. The Super-Cycle. Infinity Man. The Anti-Life Equation hunt begins." },
+          { title: "Mister Miracle #1-18", issues: "Mister Miracle #1-18 (1971-1974)", tags: ["essential"], note: "Scott Free escapes Apokolips and becomes the world's greatest escape artist. Big Barda debuts." },
         ]
       },
       {
         icon: "👥",
         title: "Team Foundations",
         items: [
-          { title: "Teen Titans #1-43", issues: "Teen Titans #1-43 (1966-1973)", note: "The original Titans run." },
+          { title: "Teen Titans #1-43", issues: "Teen Titans #1-43 (1966-1973)", note: "The original Titans run. Robin, Kid Flash, Aqualad, Wonder Girl, Speedy." },
           { title: "Doom Patrol (Original)", issues: "My Greatest Adventure #80-85, Doom Patrol #86-121", note: "Original Doom Patrol debuts: Robotman, Negative Man, Elasti-Girl, The Chief." },
         ]
       },
@@ -80,7 +82,7 @@ const DC_PHASES = [
         items: [
           { title: "Detective Comics #38 (1940)", issues: "Detective Comics #38", note: "Dick Grayson debuts as Robin. The first sidekick." },
           { title: "Batman #1 (1940)", issues: "Batman #1", note: "Catwoman debuts (as 'The Cat'). Joker debuts." },
-          { title: "Batman: A Death in the Family", issues: "Batman #426-429", note: "Jason Todd dies. The Joker murders him.", tags: ["essential"] },
+          { title: "Batman: A Death in the Family", issues: "Batman #426-429", tags: ["essential"], note: "Jason Todd dies. The Joker murders him." },
           { title: "Batman: A Lonely Place of Dying", issues: "Batman #440-442, New Titans #60-61", note: "Tim Drake deduces Batman's identity and becomes Robin." },
         ]
       }
@@ -88,8 +90,8 @@ const DC_PHASES = [
   },
   {
     id: 1,
-    title: "Crisis Era",
-    era: "1985–1989",
+    title: "Post-Crisis Foundation",
+    era: "1985–1999",
     color: "#7b68ee",
     desc: "Crisis on Infinite Earths reshapes the DC Universe into a single timeline, with new origins and beginnings.",
     eventPause: {
@@ -100,22 +102,41 @@ const DC_PHASES = [
     tracks: [
       {
         icon: "🦇",
-        title: "Batman & Bat-Family",
+        title: "Batman",
         items: [
-          { title: "Batman: Year One", issues: "Batman #404-407", tags: ["essential"], note: "The definitive modern origin. Bruce becomes Batman, Gordon arrives in Gotham." },
-          { title: "Batman: The Man Who Laughs", issues: "Batman: The Man Who Laughs #1", note: "Batman's first encounter with the Joker." },
-          { title: "Batman: Second Chances", issues: "Batman #402-403, 408-416", note: "Jason Todd becomes the second Robin." },
-          { title: "Batman: The Killing Joke", issues: "Batman: The Killing Joke #1 by Alan Moore", tags: ["essential"], note: "The Joker shoots Barbara Gordon, paralyzing her." },
-          { title: "Batman: A Death in the Family", issues: "Batman #426-429", tags: ["essential"], note: "Jason Todd dies. The Joker murders him." },
-          { title: "Batman: A Lonely Place of Dying", issues: "Batman #440-442, New Titans #60-61", note: "Tim Drake debuts." },
+          { title: "Batman: Year One", issues: "Batman #404-407 (1987)", tags: ["essential"], note: "The definitive modern origin. Bruce becomes Batman, Gordon arrives in Gotham." },
+          { title: "Batman: The Long Halloween", issues: "Batman: The Long Halloween #1-13 (1996-1997)", tags: ["essential"], note: "A 13-issue mystery spanning Batman's early career. Two-Face's origin." },
+          { title: "Batman: Dark Victory", issues: "Batman: Dark Victory #0-13 (1999-2000)", note: "Direct sequel to Long Halloween. Dick Grayson becomes Robin in the modern era." },
+          { title: "Arkham Asylum: A Serious House on Serious Earth", issues: "Arkham Asylum (1989)", tags: ["essential"], note: "Grant Morrison and Dave McKean's psychological horror masterpiece." },
         ]
       },
       {
         icon: "🦸",
-        title: "Superman & Super-Family",
+        title: "Superman",
         items: [
-          { title: "Superman: The Man of Steel", issues: "Man of Steel #1-6 by John Byrne", tags: ["essential"], note: "The post-Crisis rebooted origin." },
-          { title: "Superman: The Exile", issues: "Superman #22-36, Action Comics #601-615", note: "Superman exiles himself after nearly killing the Kryptonite Man." },
+          { title: "Superman: The Man of Steel", issues: "Man of Steel #1-6 by John Byrne (1986)", tags: ["essential"], note: "The post-Crisis rebooted origin." },
+          { title: "Superman: For All Seasons", issues: "Superman: For All Seasons #1-4 (1998)", note: "Jeph Loeb and Tim Sale's poetic look at Clark's first year in Metropolis." },
+        ]
+      },
+      {
+        icon: "⚡",
+        title: "The Flash (Full Order)",
+        items: [
+          { title: "The Flash Vol. 2 #1-50", issues: "The Flash (Vol. 2) #1-50 (1987-1991)", tags: ["essential"], note: "Wally West takes over as The Flash. Barry is dead. Wally's early struggles." },
+          { title: "The Flash: Born to Run", issues: "The Flash #62-65 (1992)", note: "Wally West's origin retold. The definitive Kid Flash backstory." },
+          { title: "The Flash: Terminal Velocity", issues: "The Flash #95-100 (1994)", tags: ["essential"], note: "Wally becomes one with the Speed Force. The Speed Force is fully introduced." },
+          { title: "The Flash: Dead Heat", issues: "The Flash Annual #6, The Flash #108-111 (1993-1995)", note: "Savitar appears. The first major Speed Force conflict." },
+          { title: "The Flash: Race Against Time", issues: "The Flash #108-111 (1995)", note: "Wally races through time to save Linda." },
+          { title: "The Flash: The Return of Barry Allen", issues: "The Flash #74-79 (1992-1993)", tags: ["essential"], note: "Barry Allen returns... but all is not what it seems. Professor Zoom's masterplan." },
+          { title: "The Flash: Rogues - Leadership", issues: "Rogues Special (2001)", note: "The Rogues and their code of honor." },
+        ]
+      },
+      {
+        icon: "💚",
+        title: "Green Lantern",
+        items: [
+          { title: "Green Lantern: Emerald Dawn", issues: "Green Lantern: Emerald Dawn #1-6", note: "Hal Jordan's post-Crisis origin." },
+          { title: "Green Lantern: Emerald Dawn II", issues: "Green Lantern: Emerald Dawn II #1-6", note: "Continuation. Sinestro's first betrayal." },
         ]
       },
       {
@@ -128,25 +149,30 @@ const DC_PHASES = [
       },
       {
         icon: "⚡",
-        title: "Flash",
-        items: [
-          { title: "The Flash (Vol. 2) #1-14 by Mike Baron", issues: "The Flash (Vol. 2) #1-14", note: "Wally West takes over as The Flash. Barry is dead.", tags: ["essential"] },
-        ]
-      },
-      {
-        icon: "💚",
-        title: "Green Lantern",
-        items: [
-          { title: "Green Lantern: Emerald Dawn", issues: "Green Lantern: Emerald Dawn #1-6", note: "Hal Jordan's post-Crisis origin." },
-          { title: "Green Lantern: Emerald Dawn II", issues: "Green Lantern: Emerald Dawn II #1-6", note: "Continuation." },
-        ]
-      },
-      {
-        icon: "⚡",
         title: "Justice League",
         items: [
-          { title: "Legends", issues: "Legends #1-6 by John Ostrander & Len Wein", note: "Darkseid manipulates humanity. The Justice League reforms." },
-          { title: "Justice League International Vol. 1-2", issues: "Justice League #1-6, JLI #7-25", note: "The funny, beloved League era. Booster Gold and Blue Beetle join." },
+          { title: "Legends", issues: "Legends #1-6 by John Ostrander & Len Wein", note: "Darkseid manipulates humanity against heroes. The Justice League reforms." },
+          { title: "Justice League International Vol. 1-2", issues: "Justice League #1-6, JLI #7-25", tags: ["essential"], note: "The funny, beloved League era. Booster Gold and Blue Beetle join." },
+        ]
+      },
+      {
+        icon: "🧨",
+        title: "Villain Track",
+        items: [
+          { title: "Lex Luthor: The Unauthorized Biography", issues: "Lex Luthor: The Unauthorized Biography (1989)", note: "The definitive post-Crisis Lex. A businessman, not a mad scientist." },
+          { title: "The Joker", issues: "The Joker #1-9 (1975 series)", note: "The Joker's original solo series. Essential for understanding his twisted worldview." },
+          { title: "Deathstroke the Terminator #1-20", issues: "Deathstroke the Terminator #1-20 (1991-1993)", note: "Slade Wilson's definitive solo series. The mercenary's code." },
+          { title: "Secret Society of Super-Villains", issues: "Secret Society of Super-Villains (1976 series)", note: "The original villain team-up. Seeds for Identity Crisis." },
+        ]
+      },
+      {
+        icon: "🏹",
+        title: "Street-Level Track",
+        items: [
+          { title: "Green Arrow: Year One", issues: "Green Arrow: Year One #1-6 (2007)", note: "Oliver Queen's origin on the island. Essential standalone." },
+          { title: "Green Arrow: The Longbow Hunters", issues: "Green Arrow: The Longbow Hunters #1-3 (1987)", tags: ["essential"], note: "Mike Grell's mature reinvention. Dark, realistic, street-level." },
+          { title: "Green Arrow Vol. 2 #1-80", issues: "Green Arrow Vol. 2 #1-80 (1988-1993)", note: "Grell's ongoing run. Seattle-based street-level heroism." },
+          { title: "The Question by Dennis O'Neil", issues: "The Question #1-36 (1987-1990)", tags: ["essential"], note: "Vic Sage's philosophical journey in Hub City. Noir masterpiece." },
         ]
       },
       {
@@ -172,77 +198,57 @@ const DC_PHASES = [
     era: "1990–1999",
     color: "var(--mv-primary)",
     desc: "A darker, more mature era featuring the Death of Superman, Knightfall, and the emergence of a new generation of heroes.",
-    eventPause: {
-      title: "Identity Crisis",
-      issues: "Identity Crisis #1-7 by Brad Meltzer & Rags Morales",
-      desc: "A murder mystery that changes how you view the League. Sue Dibny is murdered. The League's secrets (mind-wiping) are exposed."
-    },
     tracks: [
       {
-        icon: "⚡",
-        title: "Justice League",
+        icon: "🧨",
+        title: "Main Events",
         items: [
-          { title: "JLA: Year One", issues: "JLA: Year One #1-12 by Mark Waid", note: "The post-Crisis origin of the Justice League." },
-          { title: "JLA by Grant Morrison Vol. 1-4", issues: "JLA #1-41", tags: ["essential"], note: "The definitive modern League run." },
-          { title: "JLA: Tower of Babel", issues: "JLA #43-46 by Mark Waid", tags: ["essential"], note: "Batman's contingency plans against the League are stolen and used." },
+          { title: "Zero Hour: Crisis in Time!", issues: "Zero Hour #4-0 (1994)", tags: ["essential"], note: "Hal Jordan as Parallax attempts to reset reality. Timeline is cleaned up." },
+          { title: "The Final Night", issues: "The Final Night #1-4 (1996)", tags: ["essential"], note: "The Sun-Eater threatens Earth. Hal Jordan sacrifices himself to reignite the sun." },
+          { title: "Day of Judgment", issues: "Day of Judgment #1-5 (1999)", note: "The Spectre is unbound. Hal Jordan becomes the new Spectre." },
         ]
       },
       {
         icon: "🦇",
-        title: "Batman & Bat-Family",
+        title: "Batman",
         items: [
-          { title: "Batman: The Long Halloween", issues: "Batman: The Long Halloween #1-13 by Jeph Loeb & Tim Sale", tags: ["essential"], note: "A 13-issue mystery spanning Batman's early career." },
-          { title: "Batman: Dark Victory", issues: "Batman: Dark Victory #0-13 by Jeph Loeb & Tim Sale", note: "Direct sequel. Introduces Dick Grayson as Robin in the modern era." },
-          { title: "Batman: Knightfall Omnibus Vol. 1-3", issues: "Batman #491-510, Detective Comics #659-677", tags: ["essential"], note: "Bane breaks Batman. Azrael temporarily assumes the mantle." },
-          { title: "Batman: No Man's Land Vol. 1-2", issues: "Batman #563-574, Detective Comics #730-741", tags: ["essential"], note: "Gotham faces devastation. Cassandra Cain debuts as Batgirl." },
-          { title: "Nightwing (Vol. 2) #1-70", issues: "Nightwing #1-70 by Chuck Dixon", note: "Definitive Nightwing solo run. Dick moves to Blüdhaven." },
-          { title: "Robin (Vol. 4) #1-100", issues: "Robin #1-100 by Chuck Dixon", note: "Definitive Tim Drake solo run." },
-          { title: "Birds of Prey #56-108 by Gail Simone", issues: "Birds of Prey #56-108", tags: ["essential"], note: "The definitive Birds of Prey run. Oracle, Black Canary, Huntress, Lady Blackhawk." },
-          { title: "Catwoman (Vol. 3) #1-37 by Ed Brubaker", issues: "Catwoman #1-37", note: "The definitive modern Catwoman run." },
+          { title: "Batman: Knightfall", issues: "Batman #491-510, Detective Comics #659-677 (1993-1994)", tags: ["essential"], note: "Bane breaks Batman. Azrael temporarily assumes the mantle." },
+          { title: "Batman: Contagion", issues: "Various (1996)", note: "A deadly virus spreads through Gotham. Prelude to Legacy." },
+          { title: "Batman: Legacy", issues: "Various (1996-1997)", note: "Ra's al Ghul unleashes a plague. Bane returns." },
+          { title: "Batman: No Man's Land", issues: "Batman #563-574, Detective Comics #730-741 (1999)", tags: ["essential"], note: "Gotham faces devastation. Cassandra Cain debuts as Batgirl." },
         ]
       },
       {
         icon: "🦸",
-        title: "Superman & Super-Family",
+        title: "Superman",
         items: [
-          { title: "The Death and Return of Superman Omnibus", issues: "Superman #73-82, Action Comics #683-691, etc.", tags: ["essential"], note: "Complete saga. Superman dies fighting Doomsday. Four new Supermen appear. Superman eventually returns." },
-          { title: "Superman: The Wedding and Beyond", issues: "Various including Superman: The Wedding Album #1", note: "Superman marries Lois Lane." },
-          { title: "Steel (Vol. 1) #1-52", issues: "Steel #1-52", note: "John Henry Irons' solo series." },
-        ]
-      },
-      {
-        icon: "👑",
-        title: "Wonder Woman",
-        items: [
-          { title: "Wonder Woman (Vol. 2) #46-100", issues: "Various issues", note: "Various stories following Pérez's run." },
-        ]
-      },
-      {
-        icon: "⚡",
-        title: "Flash",
-        items: [
-          { title: "The Flash by Mark Waid Book 1-5", issues: "The Flash (Vol. 2) #62-118, Annual #4-5", tags: ["essential"], note: "Definitive Wally West run. Introduces the Speed Force." },
-          { title: "The Flash: Dead Heat", issues: "The Flash (Vol. 2) #108-111", note: "First major Speed Force story. Savitar appears." },
-          { title: "The Flash: Terminal Velocity", issues: "The Flash (Vol. 2) #95-100", note: "Wally becomes one with the Speed Force." },
+          { title: "The Death and Return of Superman", issues: "Superman #73-82, Action Comics #683-691 (1992-1993)", tags: ["essential"], note: "Superman dies fighting Doomsday. Four new Supermen appear. Superman returns." },
         ]
       },
       {
         icon: "💚",
         title: "Green Lantern",
         items: [
-          { title: "Green Lantern: Emerald Twilight", issues: "Green Lantern (Vol. 3) #48-50", tags: ["essential"], note: "Hal Jordan becomes Parallax, dismantles the Green Lantern Corps." },
-          { title: "Green Lantern: A New Dawn", issues: "Green Lantern (Vol. 3) #51-55", note: "Kyle Rayner becomes the last Green Lantern." },
-          { title: "Zero Hour: Crisis in Time", issues: "Zero Hour #4-0", note: "Hal Jordan as Parallax attempts to reset reality." },
-          { title: "The Final Night", issues: "The Final Night #1-4", note: "Hal Jordan sacrifices himself to reignite the sun." },
+          { title: "Green Lantern Vol. 3 #51-183 (Kyle Rayner Era)", issues: "Green Lantern Vol. 3 #51-183 (1994-2004)", tags: ["essential"], note: "Kyle Rayner becomes the last Green Lantern. Defines a generation." },
+          { title: "Green Lantern: Circle of Fire", issues: "Green Lantern: Circle of Fire #1-2 + tie-ins (2000)", note: "Kyle's constructs become sentient. Features multiple Lanterns." },
+          { title: "Green Lantern: The New Corps", issues: "Green Lantern: The New Corps #1-2 (2000)", note: "Kyle attempts to rebuild the Corps." },
+        ]
+      },
+      {
+        icon: "🦇",
+        title: "Side Titles",
+        items: [
+          { title: "Nightwing Vol. 2 #1-70", issues: "Nightwing #1-70 (1996-2002)", tags: ["essential"], note: "Chuck Dixon's definitive run. Dick moves to Bludhaven." },
+          { title: "Robin Vol. 2 #1-100", issues: "Robin #1-100 (1993-2004)", note: "Tim Drake's definitive solo run. Chuck Dixon." },
+          { title: "Birds of Prey #56-70", issues: "Birds of Prey #56-70 (2003-2004)", note: "Gail Simone's Birds. Oracle, Black Canary, Huntress." },
         ]
       },
       {
         icon: "👥",
         title: "Titans & Legacy",
         items: [
-          { title: "Young Justice #1-55", issues: "Young Justice #1-55 by Peter David", tags: ["essential"], note: "Definitive Young Justice run. Tim Drake, Superboy, Impulse, Wonder Girl." },
+          { title: "Young Justice #1-55", issues: "Young Justice #1-55 by Peter David (1998-2003)", tags: ["essential"], note: "Tim Drake, Superboy, Impulse, Wonder Girl. Definitive Young Justice run." },
           { title: "Impulse #1-89", issues: "Impulse #1-89 by Mark Waid", note: "Bart Allen's definitive solo run." },
-          { title: "Nightwing (Vol. 2) #1-70", issues: "Nightwing #1-70 by Chuck Dixon", note: "Dick moves to Blüdhaven." },
         ]
       },
       {
@@ -258,74 +264,88 @@ const DC_PHASES = [
   },
   {
     id: 3,
-    title: "Road to Infinite Crisis",
-    era: "2000–2005",
+    title: "Infinite Crisis Build-Up",
+    era: "2000–2006",
     color: "#9b59b6",
     desc: "Building toward the next major Crisis with stories exploring trust, identity, and the fracturing of the superhero community.",
     eventPause: {
       title: "Infinite Crisis",
-      issues: "Infinite Crisis #1-7 by Geoff Johns & Phil Jimenez",
-      desc: "The sequel to the original Crisis. The Multiverse returns. Superboy dies. Read after Countdown to Infinite Crisis and its four lead-in miniseries."
+      issues: "Infinite Crisis #1-7 by Geoff Johns & Phil Jimenez (2005-2006)",
+      desc: "The sequel to the original Crisis. The Multiverse returns. Superboy dies. READ LAST after all lead-in miniseries."
     },
     tracks: [
       {
-        icon: "⚡",
-        title: "Core Events",
-        items: [
-          { title: "Identity Crisis", issues: "Identity Crisis #1-7 by Brad Meltzer", tags: ["essential"], note: "A murder mystery. Sue Dibny is murdered. The League's secrets are exposed." },
-          { title: "Countdown to Infinite Crisis", issues: "Countdown to Infinite Crisis #1", note: "Ted Kord (Blue Beetle) dies. The event that kicks off the miniseries." },
-          { title: "The OMAC Project", issues: "The OMAC Project #1-6 by Greg Rucka", note: "Batman's Brother Eye satellite goes rogue. Wonder Woman kills Maxwell Lord." },
-          { title: "Villains United", issues: "Villains United #1-6 by Gail Simone", note: "The Secret Six form to resist the Secret Society." },
-          { title: "Day of Vengeance", issues: "Day of Vengeance #1-6 by Bill Willingham", note: "The Spectre destroys magic. Doctor Fate dies." },
-        ]
-      },
-      {
         icon: "🦇",
-        title: "Batman & Bat-Family",
+        title: "Batman",
         items: [
-          { title: "Batman: Hush", issues: "Batman #608-619 by Jeph Loeb & Jim Lee", tags: ["essential"], note: "A mystery involving the entire rogues gallery. Jason Todd appears (fake-out)." },
-          { title: "Batman: Under the Hood", issues: "Batman #635-641, 645-650, Annual #25", tags: ["essential"], note: "Jason Todd returns as Red Hood. The true resurrection." },
-          { title: "Red Hood: The Lost Days", issues: "Red Hood: The Lost Days #1-6 by Judd Winick", note: "What Jason did between resurrection and confronting Batman." },
-          { title: "Batman & Son", issues: "Batman #655-658, 663-675 by Grant Morrison", tags: ["essential"], note: "Damian Wayne debuts." },
-          { title: "Batman: R.I.P.", issues: "Batman #676-683 by Grant Morrison", note: "The Black Glove finally seems to break Batman." },
-          { title: "Birds of Prey #56-108 by Gail Simone", issues: "Birds of Prey #56-108", note: "The definitive Birds of Prey run." },
-          { title: "Batgirl (Vol. 1) #1-37 by Kelley Puckett", issues: "Batgirl #1-37", note: "Cassandra Cain's definitive solo run." },
-          { title: "Batman: War Games", issues: "Batman: War Games, various tie-ins", note: "A massive crossover. Stephanie Brown's fate." },
+          { title: "Batman: Officer Down", issues: "Various (2001)", note: "Commissioner Gordon is shot. A major Bat-Family crossover." },
+          { title: "Batman: Bruce Wayne - Murderer? / Fugitive", issues: "Various (2002-2003)", tags: ["essential"], note: "Bruce is framed for murder. The Bat-Family fractures." },
+          { title: "Batman: Hush", issues: "Batman #608-619 (2002-2003)", tags: ["essential"], note: "Jeph Loeb and Jim Lee. A mystery involving the entire rogues gallery." },
+          { title: "Batman: War Games", issues: "Various (2004)", note: "A massive crossover. Stephanie Brown's fate. Black Mask rises." },
         ]
       },
       {
         icon: "🦸",
-        title: "Superman & Super-Family",
+        title: "Superman",
         items: [
-          { title: "Superman: For Tomorrow", issues: "Superman #204-215 by Brian Azzarello & Jim Lee", note: "A 12-issue arc." },
-          { title: "Superman: Up, Up, and Away!", issues: "Superman #650-653, Action Comics #837-840", note: "After Infinite Crisis, Superman's powers return." },
-          { title: "Superman: Brainiac", issues: "Action Comics #866-870 by Geoff Johns & Gary Frank", tags: ["essential"], note: "Brainiac's origin and the bottle city of Kandor." },
-          { title: "Supergirl (Vol. 5) #1-19 by Jeph Loeb", issues: "Supergirl #1-19", note: "Kara Zor-El returns in the modern era." },
+          { title: "Superman: Our Worlds at War", issues: "Various (2001)", tags: ["essential"], note: "Imperiex threatens reality. Massive casualties. Lex Luthor is president." },
+          { title: "Superman: Ending Battle", issues: "Various (2002)", note: "Manchester Black's final scheme against Superman." },
+          { title: "Superman: Birthright", issues: "Superman: Birthright #1-12 (2003-2004)", note: "Mark Waid retells Superman's origin for the modern era." },
+          { title: "Superman: Sacrifice", issues: "Various (2005)", tags: ["essential"], note: "Maxwell Lord controls Superman. Wonder Woman kills Maxwell Lord." },
         ]
       },
       {
-        icon: "👑",
-        title: "Wonder Woman",
+        icon: "🔗",
+        title: "Shared",
         items: [
-          { title: "Wonder Woman: The Hiketeia", issues: "Wonder Woman: The Hiketeia #1 by Greg Rucka", tags: ["essential"], note: "A standalone masterpiece. Wonder Woman vs. Batman over a fugitive." },
-          { title: "Wonder Woman (Vol. 2) #188-200 by Greg Rucka", issues: "Wonder Woman #188-200", note: "Greg Rucka's run." },
+          { title: "Superman/Batman #1-25", issues: "Superman/Batman #1-25 (2003-2005)", tags: ["essential"], note: "Jeph Loeb's run. Supergirl returns. President Luthor falls." },
         ]
       },
       {
-        icon: "💚",
-        title: "Green Lantern",
+        icon: "⚡",
+        title: "The Flash",
         items: [
-          { title: "Green Lantern: Rebirth", issues: "Green Lantern: Rebirth #1-6 by Geoff Johns", tags: ["essential"], note: "Hal Jordan returns. The Spectre/Hal entity is resolved." },
-          { title: "Green Lantern: No Fear", issues: "Green Lantern (Vol. 4) #1-6", note: "Hal's new status quo." },
-          { title: "Green Lantern Corps: Recharge", issues: "Green Lantern Corps: Recharge #1-5", note: "The Corps is rebuilt." },
+          { title: "The Flash Vol. 2 #151-230 (Geoff Johns Run)", issues: "The Flash #151-230 (2000-2006)", tags: ["essential"], note: "Geoff Johns defines the Rogues. Wally's legacy. Hunter Zolomon as Zoom." },
         ]
       },
       {
-        icon: "👥",
-        title: "Titans & Legacy",
+        icon: "🧬",
+        title: "Titans / Legacy",
         items: [
-          { title: "Teen Titans (Vol. 3) #1-50 by Geoff Johns", issues: "Teen Titans #1-50", tags: ["essential"], note: "The definitive modern Titans run. Tim Drake's Robin, Conner Kent's Superboy, Cassie's Wonder Girl, Bart's Kid Flash." },
-          { title: "Nightwing (Vol. 2) #71-100", issues: "Various", note: "Dick's series continues." },
+          { title: "Young Justice #1-55", issues: "Young Justice #1-55 (1998-2003)", tags: ["essential"], note: "Tim, Kon, Bart, Cassie. Peter David's classic run." },
+          { title: "Titans #1-50", issues: "Titans #1-50 (1999-2003)", note: "The adult Titans team: Nightwing, Donna, Wally, Roy, Garth." },
+          { title: "Titans/Young Justice: Graduation Day", issues: "Titans/YJ: Graduation Day #1-3 (2003)", tags: ["essential"], note: "Donna Troy dies. Both teams disband. Sets up Teen Titans Vol. 3." },
+          { title: "Teen Titans Vol. 3 #1-33", issues: "Teen Titans #1-33 (2003-2006)", tags: ["essential"], note: "Geoff Johns. Robin, Superboy, Kid Flash, Wonder Girl, Raven, Beast Boy, Starfire." },
+        ]
+      },
+      {
+        icon: "🕶️",
+        title: "Outsiders",
+        items: [
+          { title: "Outsiders Vol. 3 #1-33", issues: "Outsiders #1-33 (2003-2006)", note: "Nightwing leads a black ops team. Arsenal, Starfire, Jade, Thunder, Grace." },
+        ]
+      },
+      {
+        icon: "🏛",
+        title: "JSA / JLA",
+        items: [
+          { title: "JSA #1-83", issues: "JSA #1-83 (1999-2006)", tags: ["essential"], note: "Geoff Johns and David Goyer. The definitive JSA run." },
+          { title: "JLA #70-125", issues: "JLA #70-125 (2002-2006)", note: "Various writers. The League through the Crisis era." },
+        ]
+      },
+      {
+        icon: "🧨",
+        title: "Core Events Order",
+        items: [
+          { title: "Titans/Young Justice: Graduation Day", issues: "Graduation Day #1-3 (2003)", note: "Donna Troy dies. Both teams end." },
+          { title: "Identity Crisis", issues: "Identity Crisis #1-7 (2004)", tags: ["essential"], note: "Sue Dibny is murdered. The League's mind-wiping secrets exposed." },
+          { title: "Countdown to Infinite Crisis", issues: "Countdown to Infinite Crisis #1 (2005)", tags: ["essential"], note: "Ted Kord (Blue Beetle) dies. The path to Infinite Crisis begins." },
+          { title: "Rann-Thanagar War", issues: "Rann-Thanagar War #1-6 (2005)", note: "Adam Strange caught between two warring planets." },
+          { title: "Day of Vengeance", issues: "Day of Vengeance #1-6 (2005)", note: "The Spectre destroys magic. Doctor Fate dies." },
+          { title: "Villains United", issues: "Villains United #1-6 (2005)", note: "The Secret Six resist the Secret Society." },
+          { title: "The OMAC Project", issues: "The OMAC Project #1-6 (2005)", tags: ["essential"], note: "Brother Eye goes rogue. Wonder Woman kills Maxwell Lord." },
+          { title: "The Return of Donna Troy", issues: "The Return of Donna Troy #1-4 (2005)", note: "Donna returns from the dead as a cosmic being." },
+          { title: "Infinite Crisis", issues: "Infinite Crisis #1-7 (2005-2006)", tags: ["essential"], note: "The Multiverse returns. Superboy dies. Earth is reborn." },
         ]
       }
     ]
@@ -333,71 +353,287 @@ const DC_PHASES = [
   {
     id: 4,
     title: "Cosmic Saga",
-    era: "2006–2010",
+    era: "2006–2011",
     color: "#e67e22",
-    desc: "52, Final Crisis, and Blackest Night expand the scope to cosmic and multiversal threats.",
+    desc: "52, Final Crisis, Blackest Night, and Flashpoint. The scope expands to cosmic and multiversal threats. Structured in two complete layers.",
     eventPause: {
-      title: "Final Crisis → Blackest Night",
-      issues: "Final Crisis #1-7; Blackest Night #0-8",
-      desc: "Darkseid wins. The Anti-Life Equation takes over. Batman 'dies.' Then: The dead rise. Nekron unleashes Black Lantern rings. The emotional spectrum culminates."
+      title: "Flashpoint",
+      issues: "Flashpoint #1-5 by Geoff Johns & Andy Kubert (2011)",
+      desc: "Barry Allen wakes up in a twisted timeline. The event that resets everything into the New 52."
     },
     tracks: [
       {
-        icon: "🌌",
-        title: "Core Events",
+        icon: "🔥",
+        title: "LAYER 1: 52 → Final Crisis",
         items: [
-          { title: "52 #1-52", issues: "52 #1-52 by Johns, Morrison, Rucka, Waid", tags: ["essential"], note: "The missing year after Infinite Crisis. Booster Gold, The Question, Ralph Dibny." },
-          { title: "Sinestro Corps War", issues: "GL: Sinestro Corps Special #1, GL #21-25, GLC #14-18", tags: ["essential"], note: "Sinestro returns with his fear-powered Corps. The war of light begins." },
-          { title: "Final Crisis", issues: "Final Crisis #1-7, Final Crisis: Submit, Superman Beyond 3D #1-2, Batman #682-683", tags: ["essential"], note: "Darkseid wins. The Anti-Life Equation takes over. Batman is shot by Darkseid." },
-          { title: "Blackest Night", issues: "Blackest Night #0-8, GL #43-52, GLC #39-47", tags: ["essential"], note: "The dead rise. Nekron unleashes Black Lantern rings." },
-          { title: "Brightest Day", issues: "Brightest Day #0-24", note: "Twelve heroes and villains are resurrected. The aftermath of Blackest Night." },
+          { title: "52 #1-52 (ENTRY POINT)", issues: "52 #1-52 (2006-2007)", tags: ["essential"], note: "The missing year after Infinite Crisis. Booster Gold, The Question, Ralph Dibny, Black Adam. Four writers, 52 weeks." },
         ]
       },
       {
         icon: "🦇",
-        title: "Batman & Bat-Family",
+        title: "Batman Track",
         items: [
-          { title: "Batman & Robin by Grant Morrison Vol. 1-3", issues: "Batman & Robin #1-16", tags: ["essential"], note: "Dick Grayson as Batman, Damian Wayne as Robin. The definitive era." },
-          { title: "Batman: The Return of Bruce Wayne", issues: "Batman: The Return of Bruce Wayne #1-6", note: "Bruce travels through time to return." },
-          { title: "Batman Incorporated Vol. 1", issues: "Batman Incorporated #1-8", note: "Bruce's vision of franchising Batman globally." },
-          { title: "Batman: The Black Mirror", issues: "Detective Comics #871-881 by Scott Snyder", tags: ["essential"], note: "Dick Batman vs. a villain who knows Gotham's secrets. A masterpiece." },
-          { title: "Red Robin #1-26", issues: "Red Robin #1-26 by Chris Yost", note: "Tim Drake becomes Red Robin and searches for Bruce." },
-          { title: "Batgirl (Vol. 3) #1-24 by Bryan Q. Miller", issues: "Batgirl #1-24", tags: ["essential"], note: "Stephanie Brown becomes Batgirl. A beloved, heartfelt run." },
-          { title: "Gotham City Sirens #1-26", issues: "Gotham City Sirens #1-26", note: "Catwoman, Poison Ivy, and Harley Quinn." },
+          { title: "Batman: Face the Face", issues: "Batman #651-654 (2006)", note: "One Year Later. Harvey Dent as Gotham's protector goes wrong." },
+          { title: "Batman and Son", issues: "Batman #655-658 (2006)", tags: ["essential"], note: "Grant Morrison begins. Damian Wayne debuts." },
+          { title: "Batman: The Resurrection of Ra's al Ghul", issues: "Batman, Detective, Nightwing, Robin crossover (2007)", note: "Ra's returns. Spans multiple titles." },
+          { title: "Batman: The Black Glove", issues: "Batman #667-669 (2007)", note: "The Club of Heroes debuts. Black Glove's first appearance." },
+          { title: "Detective Comics #821-834", issues: "Detective Comics #821-834 (2006-2007)", note: "Paul Dini's run. Standalone mysteries." },
+          { title: "Nightwing Vol. 2 #118-138", issues: "Nightwing #118-138 (2006-2007)", note: "Dick's solo title during this period." },
+          { title: "Robin Vol. 2 #148-167", issues: "Robin #148-167 (2006-2007)", note: "Tim Drake as Robin." },
+          { title: "Batman and the Outsiders Vol. 2 #1-10", issues: "Batman and the Outsiders #1-10 (2007)", note: "The team with Black Lightning." },
+          { title: "Gotham Underground #1-9", issues: "Gotham Underground #1-9 (2007-2008)", note: "The criminal underworld of Gotham." },
+          { title: "Detective Comics #834-850", issues: "Detective Comics #834-850 (2007-2008)", note: "Continued Gotham stories." },
+          { title: "Batman R.I.P.", issues: "Batman #676-681 (2008)", tags: ["essential"], note: "Morrison's final Batman arc before Final Crisis. Black Glove's endgame." },
+          { title: "Batman and the Outsiders #11-13", issues: "Batman and the Outsiders #11-13 (2008)", note: "Outsiders final issues before FC." },
+          { title: "Robin #175-183", issues: "Robin #175-183 (2008-2009)", note: "Tim's final issues before searching for Bruce." },
+          { title: "Nightwing #147-153", issues: "Nightwing #147-153 (2008-2009)", note: "Dick's solo title through Final Crisis." },
+          { title: "Batman #682-683: Last Rites", issues: "Batman #682-683 (2008)", tags: ["essential"], note: "Batman's life during Final Crisis #5-6. Essential context." },
+        ]
+      },
+      {
+        icon: "🧬",
+        title: "Titans/Legacy/Street Track",
+        items: [
+          { title: "Teen Titans Vol. 3 #34-57", issues: "Teen Titans #34-57 (2006-2008)", note: "Robin, Superboy, Kid Flash, Wonder Girl, Raven, Beast Boy, Starfire." },
+          { title: "Titans (2008) #1-6", issues: "Titans #1-6 (2008)", note: "Adult Titans team." },
+          { title: "Outsiders Vol. 3 #34-49", issues: "Outsiders #34-49 (2006-2007)", note: "Nightwing's team. Grace, Jade, Thunder." },
+          { title: "Outsiders: Five of a Kind", issues: "2007 crossover", note: "Outsiders spotlight mini-series." },
+        ]
+      },
+      {
+        icon: "🕵️",
+        title: "Villains/Intelligence Layer",
+        items: [
+          { title: "Checkmate Vol. 2 #1-31", issues: "Checkmate #1-31 (2006-2008)", note: "The spy organization. Sasha Bordeaux and Maxwell Lord." },
+          { title: "Secret Six: Six Degrees of Devastation", issues: "2008 mini-series", note: "The team's origin and first story." },
+          { title: "Secret Six Vol. 3 #1-14", issues: "Secret Six #1-14 (2008-2009)", note: "Gail Simone's definitive run begins." },
         ]
       },
       {
         icon: "🦸",
-        title: "Superman & Super-Family",
+        title: "Superman Track",
         items: [
-          { title: "Superman: New Krypton", issues: "Action Comics #871-877, Superman #681-683, etc.", tags: ["essential"], note: "The massive saga where Kandor becomes a new planet." },
-          { title: "Superman: War of the Supermen", issues: "War of the Supermen #1-4", note: "The finale of the New Krypton saga." },
+          { title: "Superman: Up, Up and Away", issues: "Superman #650-653 & Action Comics #837-840 (2006)", note: "Superman's powers return after Infinite Crisis." },
+          { title: "Superman #654-675", issues: "Superman #654-675 (2006-2008)", note: "The Superman title during this era." },
+          { title: "Action Comics #841-871", issues: "Action Comics #841-871 (2006-2008)", note: "Action Comics run through Final Crisis." },
+          { title: "Supergirl Vol. 5 #10-30", issues: "Supergirl #10-30 (2006-2008)", note: "Kara Zor-El's solo series." },
+          { title: "Supergirl and the Legion of Super-Heroes #16-37", issues: "#16-37 (2006-2008)", note: "Legion integration." },
+          { title: "Legion of Super-Heroes Vol. 5 #38-50", issues: "#38-50 (2008)", note: "The Legion title." },
         ]
       },
       {
-        icon: "⚡",
-        title: "Flash",
+        icon: "🦸‍♀️",
+        title: "Wonder Woman Track",
         items: [
-          { title: "The Flash: Rebirth", issues: "The Flash: Rebirth #1-6 by Geoff Johns", tags: ["essential"], note: "Barry Allen returns from the dead." },
-          { title: "The Flash (Vol. 3) #1-12", issues: "The Flash (Vol. 3) #1-12", note: "Barry's new series." },
+          { title: "Wonder Woman Vol. 3 #1-13", issues: "#1-13 (2006-2007)", note: "Jodi Picoult's run." },
+          { title: "Amazons Attack! #1-6", issues: "#1-6 (2007)", note: "The controversial crossover event." },
+          { title: "Wonder Girl (2007) #1-6", issues: "#1-6 (2007)", note: "Cassie Sandsmark's solo series." },
+          { title: "Wonder Woman #14-24", issues: "#14-24 (2007-2008)", note: "Gail Simone takes over." },
+          { title: "Trinity #1-17", issues: "#1-17 (2008)", note: "Superman, Batman, Wonder Woman in weekly series." },
         ]
       },
       {
         icon: "💚",
-        title: "Green Lantern",
+        title: "Green Lantern & Corps Track",
         items: [
-          { title: "Green Lantern: Secret Origin", issues: "Green Lantern #29-35 by Geoff Johns", note: "Hal's origin retold." },
-          { title: "Green Lantern (Vol. 4) #26-52", issues: "Various", note: "The rest of Geoff Johns' run." },
-          { title: "Green Lantern Corps (Vol. 2) #1-63", issues: "Various", note: "The Corps' ongoing adventures." },
+          { title: "Green Lantern Vol. 4 #13-20", issues: "#13-20 (2006-2007)", note: "Hal Jordan's title." },
+          { title: "Green Lantern Corps Vol. 2 #1-13", issues: "#1-13 (2006-2007)", note: "The Corps title launches." },
+          { title: "Sinestro Corps War (Crossover)", issues: "2007", note: "Epic GL event." },
+          { title: "Green Lantern: Sinestro Corps Special #1", issues: "(2007)", tags: ["essential"], note: "The Sinestro Corps attacks." },
+          { title: "Green Lantern #21-25", issues: "#21-25 (2007)", note: "War escalates." },
+          { title: "Green Lantern Corps #14-19", issues: "#14-19 (2007)", note: "Corps in the war." },
+          { title: "Tales of the Sinestro Corps", issues: "(2007)", note: "Character spotlight minis." },
+          { title: "Green Lantern #26-28", issues: "#26-28 (2007-2008)", note: "War aftermath." },
+          { title: "Green Lantern Corps #20-24", issues: "#20-24 (2007-2008)", note: "Corps aftermath." },
+          { title: "Rage of the Red Lanterns", issues: "(2007-2008)", note: "Red Lanterns emerge." },
         ]
       },
       {
-        icon: "👥",
-        title: "Titans & Legacy",
+        icon: "🏛",
+        title: "JLA/JSA Track",
         items: [
-          { title: "The Titans #1-50", issues: "The Titans #1-50", note: "Adult Titans reunite: Nightwing, Flash (Wally), Donna Troy, Roy Harper." },
-          { title: "Teen Titans (Vol. 3) #51-100", issues: "Various", note: "The post-Johns era." },
-          { title: "Robin #175-183", issues: "Robin #175-183", note: "Tim's final issues as Robin." },
+          { title: "JSA #83-87", issues: "#83-87 (2006)", note: "Conclusion of original JSA series." },
+          { title: "Justice League of America Vol. 2 #0-12", issues: "#0-12 (2006-2007)", note: "The new JLA era begins." },
+          { title: "Justice Society of America Vol. 3 #1-4", issues: "#1-4 (2007)", note: "The new JSA series." },
+          { title: "Justice League of America #8-12", issues: "#8-12 (2007)", note: "JLA continues." },
+          { title: "Justice Society of America #5-6", issues: "#5-6 (2007)", note: "JSA continues." },
+          { title: "Justice League of America #13-21", issues: "#13-21 (2007-2008)", note: "JLA toward Final Crisis." },
+          { title: "Justice Society of America #7-22", issues: "#7-22 (2007-2009)", note: "JSA toward Final Crisis." },
+          { title: "Justice Society of America #23-26", issues: "#23-26 (2009)", note: "JSA aftermath." },
+          { title: "Power Girl (2009) #1-27", issues: "#1-27 (2009)", note: "Karen Starr's solo series." },
+        ]
+      },
+      {
+        icon: "🌌",
+        title: "Cosmic/Multiverse Track",
+        items: [
+          { title: "Seven Soldiers by Grant Morrison (Full Series)", issues: "(2005-2006)", tags: ["essential"], note: "Shining Knight, Guardian, Zatanna, Klarion, Mister Miracle, Bulleteer, Frankenstein." },
+          { title: "Death of the New Gods", issues: "(2007-2008)", note: "The Fourth World faces apocalypse." },
+          { title: "Blue Beetle Vol. 7 #1-26", issues: "#1-26 (2006-2008)", note: "Jaime Reyes as Blue Beetle." },
+          { title: "Booster Gold Vol. 2 #1-10", issues: "#1-10 (2007-2008)", note: "Michael Jon Carter's new solo series." },
+        ]
+      },
+      {
+        icon: "🧭",
+        title: "Countdown to Final Crisis",
+        items: [
+          { title: "Countdown to Final Crisis #51-0", issues: "#51-0 (2007-2008)", tags: ["essential"], note: "Weekly series. Mary Marvel's fall. The Monitors. Context for FC." },
+          { title: "Countdown: The Search for Ray Palmer #1-4", issues: "#1-4 (2007)", note: "Multiverse exploration. Donna, Jason, Kyle, Monitor Bob." },
+          { title: "Countdown to Adventure #1-8", issues: "#1-8 (2007-2008)", note: "Adam Strange, Animal Man, Starfire." },
+          { title: "Countdown to Mystery #1-8", issues: "#1-8 (2007-2008)", note: "Doctor Fate and Eclipso stories." },
+          { title: "Salvation Run #1-7", issues: "#1-7 (2007-2008)", note: "Villains exiled to a prison planet." },
+          { title: "DC Universe #0", issues: "(2008)", tags: ["essential"], note: "Direct FC setup. Barry Allen returns. READ BEFORE FC." },
+        ]
+      },
+      {
+        icon: "🧨",
+        title: "Final Crisis Event (Read in Order)",
+        items: [
+          { title: "Final Crisis #1-7", issues: "#1-7 (2008)", tags: ["essential"], note: "Darkseid wins. Anti-Life Equation enslaves Earth. Batman shot." },
+          { title: "Final Crisis: Superman Beyond #1-2", issues: "3D #1-2 (2008)", tags: ["essential"], note: "Read after FC #3. Superman in Multiverse. The Thought Robot." },
+          { title: "Final Crisis: Submit #1", issues: "(2008)", note: "Read after FC #3. Black Lightning and Tattooed Man." },
+          { title: "Batman #682-683: Last Rites", issues: "(2008)", tags: ["essential"], note: "Batman's fate during FC #5-6. Critical." },
+          { title: "Final Crisis: Revelations #1-5", issues: "#1-5 (2008)", note: "The Spectre vs. Libra. Renee Montoya as The Question." },
+          { title: "Final Crisis: Legion of Three Worlds #1-5", issues: "#1-5 (2008-2009)", note: "Superboy-Prime vs. three Legions. Connor Kent and Bart Allen." },
+          { title: "Final Crisis: Rogues' Revenge #1-3", issues: "#1-3 (2008)", tags: ["essential"], note: "The Rogues hunt Inertia. Essential Flash context." },
+          { title: "Terror Titans #1-6", issues: "#1-6 (2008-2009)", note: "Dark Side Club. Teen heroes in death matches." },
+        ]
+      },
+      {
+        icon: "☠️",
+        title: "LAYER 2: Blackest Night → Flashpoint",
+        items: [
+          { title: "Blackest Night #0-8", issues: "#0-8 (2009-2010)", tags: ["essential"], note: "The dead rise. Nekron unleashes Black Lantern rings." },
+        ]
+      },
+      {
+        icon: "☠️",
+        title: "Blackest Night: Full Tie-Ins",
+        items: [
+          { title: "Blackest Night: Batman #1-3", issues: "#1-3 (2009)", note: "Dick Grayson vs. Black Lantern Graysons." },
+          { title: "Blackest Night: Superman #1-3", issues: "#1-3 (2009)", note: "Black Lantern Kal-L and Earth-2 Lois." },
+          { title: "Blackest Night: Titans #1-3", issues: "#1-3 (2009)", note: "Terra and other dead Titans return." },
+          { title: "Blackest Night: The Flash #1-3", issues: "#1-3 (2009-2010)", note: "Barry confronts the Rogues' victims." },
+          { title: "Blackest Night: Justice Society of America #1-3", issues: "#1-3 (2009-2010)", note: "The JSA faces Black Lanterns." },
+          { title: "Blackest Night: Wonder Woman #1-3", issues: "#1-3 (2009-2010)", note: "Diana becomes a Star Sapphire." },
+        ]
+      },
+      {
+        icon: "🦇",
+        title: "Batman Track (Layer 2)",
+        items: [
+          { title: "Batman: Battle for the Cowl #1-3", issues: "#1-3 (2009)", tags: ["essential"], note: "Bruce 'dead'. Dick becomes Batman. Jason claims cowl." },
+          { title: "Gotham Gazette: Batman Dead? #1", issues: "#1 (2009)", note: "Gotham's reaction to Batman's disappearance." },
+          { title: "Azrael: Death's Dark Knight #1-3", issues: "#1-3 (2009)", note: "Jean-Paul Valley's return." },
+          { title: "Oracle: The Cure #1-3", issues: "#1-3 (2009)", note: "Barbara Gordon's story." },
+          { title: "Batman #687-691: Long Shadows", issues: "#687-691 (2009)", note: "Dick as Batman begins." },
+          { title: "Detective Comics #852-865", issues: "#852-865 (2009-2010)", note: "Gotham detective stories." },
+          { title: "Batman: Streets of Gotham #1-21", issues: "#1-21 (2009-2010)", note: "Street-level Gotham stories." },
+          { title: "Batman #692-699: Life After Death", issues: "#692-699 (2009-2010)", note: "Dick's Batman era." },
+          { title: "Batman: Arkham Reborn #1-3", issues: "#1-3 (2009)", note: "Arkham Asylum rebuilt." },
+          { title: "Red Robin #1-26", issues: "#1-26 (2009-2011)", note: "Tim Drake searches for Bruce." },
+          { title: "Batgirl (2009) #1-24", issues: "#1-24 (2009-2011)", tags: ["essential"], note: "Stephanie Brown as Batgirl. Bryan Q. Miller masterpiece." },
+          { title: "Birds of Prey (2010) #1-15", issues: "#1-15 (2010-2011)", note: "Gail Simone returns. Oracle's team." },
+          { title: "Gotham City Sirens #1-26", issues: "#1-26 (2009-2011)", note: "Catwoman, Ivy, Harley." },
+          { title: "Batman and Robin #1-16", issues: "#1-16 (2009-2010)", tags: ["essential"], note: "Morrison's masterpiece. Dick and Damian." },
+          { title: "Batman #700", issues: "#700 (2010)", note: "Anniversary issue." },
+          { title: "Batman #701-702", issues: "#701-702 (2010-2011)", note: "Dick Batman continues." },
+          { title: "Batman: The Return of Bruce Wayne #1-6", issues: "#1-6 (2010)", note: "Bruce travels through time home." },
+          { title: "Batman: The Return (one-shot)", issues: "(2010)", note: "Bruce's return setup." },
+          { title: "Batman Incorporated #1-8", issues: "#1-8 (2011)", note: "Bruce franchises Batman globally." },
+          { title: "Batman Inc.: Leviathan Strikes", issues: "(2011)", note: "Leviathan arc." },
+          { title: "Detective Comics #871-881: The Black Mirror", issues: "#871-881 (2011)", tags: ["essential"], note: "Scott Snyder masterpiece. Dick vs. Gordon Jr." },
+        ]
+      },
+      {
+        icon: "🦸",
+        title: "Superman Track (Layer 2)",
+        items: [
+          { title: "Superman: New Krypton Special", issues: "(2008)", note: "Kandor becomes a planet." },
+          { title: "Superman #681-690", issues: "#681-690 (2008-2009)", note: "Superman title during New Krypton." },
+          { title: "Action Comics #871-879", issues: "#871-879 (2008-2009)", note: "Action Comics." },
+          { title: "Supergirl #35-43", issues: "#35-43 (2008-2009)", note: "Kara during New Krypton." },
+          { title: "Superman: World of New Krypton #1-12", issues: "#1-12 (2009-2010)", note: "The New Krypton saga continues." },
+          { title: "Action Comics #880-889", issues: "#880-889 (2009-2010)", note: "Superman on New Krypton." },
+          { title: "Supergirl #45-52", issues: "#45-52 (2009-2010)", note: "Kara on New Krypton." },
+          { title: "Superman: Last Stand of New Krypton #1-3", issues: "#1-3 (2010)", note: "War of the Supermen begins." },
+          { title: "Superman: War of the Supermen #0-4", issues: "#0-4 (2010)", tags: ["essential"], note: "The New Krypton saga concludes." },
+          { title: "Superman #700", issues: "#700 (2010)", note: "Anniversary issue." },
+          { title: "Action Comics #890-900", issues: "#890-900 (2010-2011)", note: "Superman returns to Earth." },
+          { title: "Superman #701-714", issues: "#701-714 (2010-2011)", note: "Superman title toward Flashpoint." },
+        ]
+      },
+      {
+        icon: "💚",
+        title: "Green Lantern Track (Layer 2)",
+        items: [
+          { title: "Green Lantern #43-52", issues: "#43-52 (2009-2010)", note: "GL title through Blackest Night." },
+          { title: "Green Lantern Corps #39-47", issues: "#39-47 (2009-2010)", note: "Corps through Blackest Night." },
+          { title: "Brightest Day #0-24", issues: "#0-24 (2010-2011)", tags: ["essential"], note: "Resurrection and aftermath." },
+          { title: "Green Lantern #53-62", issues: "#53-62 (2010-2011)", note: "GL continues post-Blackest Night." },
+          { title: "Green Lantern Corps #48-57", issues: "#48-57 (2010-2011)", note: "Corps continues." },
+          { title: "War of the Green Lanterns", issues: "(2010)", note: "Event story." },
+          { title: "Green Lantern #63-67", issues: "#63-67 (2011)", note: "GL toward Flashpoint." },
+          { title: "Green Lantern Corps #58-60", issues: "#58-60 (2011)", note: "Corps toward Flashpoint." },
+          { title: "Green Lantern: Emerald Warriors #8-10", issues: "#8-10 (2011)", note: "Guy Gardner's series." },
+          { title: "War of the Green Lanterns: Aftermath #1-2", issues: "#1-2 (2011)", note: "War aftermath." },
+          { title: "Green Lantern: Emerald Warriors #1-7", issues: "#1-7 (2010-2011)", note: "Guy Gardner solo series." },
+        ]
+      },
+      {
+        icon: "🏛",
+        title: "Justice League/JSA (Layer 2)",
+        items: [
+          { title: "Justice League of America #38-43", issues: "#38-43 (2009-2010)", note: "JLA title." },
+          { title: "Justice League: Cry for Justice #1-7", issues: "#1-7 (2009-2010)", note: "Arsenal leads a team." },
+          { title: "Justice League of America #44-60", issues: "#44-60 (2010-2011)", note: "JLA continues." },
+          { title: "Justice Society of America #41-57", issues: "#41-57 (2010-2011)", note: "JSA continues." },
+          { title: "Justice League: Generation Lost #1-24", issues: "#1-24 (2010-2011)", note: "Blue Beetle and Booster Gold hunt Maxwell Lord." },
+          { title: "Power Girl #1-27", issues: "#1-27 (2009-2011)", note: "Karen Starr solo series." },
+        ]
+      },
+      {
+        icon: "🧬",
+        title: "Titans Track (Layer 2)",
+        items: [
+          { title: "Teen Titans #71-100", issues: "#71-100 (2009-2011)", note: "Teen Titans final issues." },
+          { title: "Titans (2008) #7-38", issues: "#7-38 (2008-2010)", note: "Adult Titans team." },
+        ]
+      },
+      {
+        icon: "🦸‍♀️",
+        title: "Wonder Woman Track (Layer 2)",
+        items: [
+          { title: "Wonder Woman #25-44", issues: "#25-44 (2009-2010)", note: "WW title Layer 2." },
+          { title: "Blackest Night: Wonder Woman #1-3", issues: "#1-3 (2009-2010)", note: "Diana in Blackest Night." },
+        ]
+      },
+      {
+        icon: "🌌",
+        title: "Magic/Cosmic Track (Layer 2)",
+        items: [
+          { title: "Zatanna (2010) #1-16", issues: "#1-16 (2010-2011)", note: "Zatanna solo series." },
+          { title: "Mister Miracle (2010) #1-8", issues: "#1-8 (2010-2011)", note: "Shilo Norman as Mister Miracle." },
+        ]
+      },
+      {
+        icon: "⚡",
+        title: "The Flash (Placed Last)",
+        items: [
+          { title: "The Flash: Rebirth #1-6", issues: "#1-6 (2009-2010)", tags: ["essential"], note: "Barry Allen returns. Speed Force redefined." },
+          { title: "The Flash Vol. 3 #1-12", issues: "#1-12 (2010-2011)", note: "Barry's new series. Road to Flashpoint." },
+        ]
+      },
+      {
+        icon: "💥",
+        title: "Flashpoint Event (Bottom of Phase 4)",
+        items: [
+          { title: "Flashpoint #1-5", issues: "#1-5 (2011)", tags: ["essential"], note: "Barry wakes in twisted timeline. Thomas Wayne is Batman." },
+          { title: "Flashpoint: Batman – Knight of Vengeance #1-3", issues: "#1-3 (2011)", tags: ["essential"], note: "Thomas Wayne's brutal Batman. Best Flashpoint tie-in." },
+          { title: "Flashpoint: Wonder Woman and the Furies #1-3", issues: "#1-3 (2011)", note: "Diana and Aquaman's war for Europe." },
+          { title: "Flashpoint: Emperor Aquaman #1-3", issues: "#1-3 (2011)", note: "Arthur sinks Europe. Authoritarian vision." },
+          { title: "Flashpoint: Project Superman #1-3", issues: "#1-3 (2011)", note: "Kal-El raised in government bunker." },
+          { title: "Flashpoint: Citizen Cold #1-3", issues: "#1-3 (2011)", note: "Captain Cold as Central City's hero." },
         ]
       }
     ]
